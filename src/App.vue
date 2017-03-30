@@ -1,43 +1,63 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1></h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <ui-sidebar class="main-sidebar">
+      <div slot="bottom-con">
+        <ui-menu class="main-header" :menu="menu"></ui-menu>
+      </div>
+    </ui-sidebar>
+    <div class="main-container" ref="adj_container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import UiMenu from './components/common/UiMenu.vue'
+import UiSidebar from './components/common/UiSidebar.vue'
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      menu: [
+        { name: 'About', route: '/' },
+        { name: 'Projects', route: '/' },
+        { name: 'Blog', route: '/' }
+      ]
     }
+  },
+  components: {
+    UiMenu,
+    UiSidebar
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Varela Round', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+
+html, body {
+    height: 100%;
+    font-size: 12px;
+    color: #3e3f43;
+    margin: 0;
+}
+
+[v-cloak] {
+    display: none;
 }
 
 h1, h2 {
@@ -47,14 +67,34 @@ h1, h2 {
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0;
 }
 
 a {
-  color: #42b983;
+  color: #3e3f43;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.main-header {
+  background-color: #3e3f43;
+  // background: #232526; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to top, #232526 , #414345); 
+  // background: linear-gradient(to top, #232526 , #414345); 
+  li {
+    a { 
+      color: #fff;
+      padding: 14px;
+      display: inline-block;
+    }
+  }
 }
 </style>
