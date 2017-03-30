@@ -98,8 +98,6 @@ export default {
 	},
 
 	mounted() {
-        console.log(this.$parent.$refs.adj_container)
-
         this._visible = this.visible
 
         window.addEventListener('resize', this.handleResize)

@@ -35,10 +35,15 @@ export default {
 
 <style lang="scss">
 html, body {
-    height: 100%;
-    font-size: 12px;
-    color: #3e3f43;
-    margin: 0;
+  height: 100%;
+  font-size: 12px;
+}
+
+body {
+  height: 100%;
+  font-size: 12px;
+  color: #3e3f43;
+  margin: 0;
 }
 
 #app {
