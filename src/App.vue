@@ -34,9 +34,19 @@ export default {
 </script>
 
 <style lang="scss">
-html, body {
+*:not(body),
+*::before,
+*::after {
+    box-sizing: border-box;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
+}
+
+body {
   height: 100%;
   font-size: 12px;
+  font-family: 'Varela Round', sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -47,18 +57,7 @@ body {
 }
 
 #app {
-  font-family: 'Varela Round', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    transition: all .4s cubic-bezier(.25,.8,.25,1);
 }
 
 [v-cloak] {
@@ -90,6 +89,7 @@ img {
 }
 
 .main-header {
+  text-align: center;
   background-color: #3e3f43;
   // background: #232526; /* fallback for old browsers */
   // background: -webkit-linear-gradient(to top, #232526 , #414345); 
