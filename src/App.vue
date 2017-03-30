@@ -34,6 +34,13 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+    height: 100%;
+    font-size: 12px;
+    color: #3e3f43;
+    margin: 0;
+}
+
 #app {
   font-family: 'Varela Round', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,13 +54,6 @@ export default {
 *::after {
     box-sizing: border-box;
     transition: all .4s cubic-bezier(.25,.8,.25,1);
-}
-
-html, body {
-    height: 100%;
-    font-size: 12px;
-    color: #3e3f43;
-    margin: 0;
 }
 
 [v-cloak] {
