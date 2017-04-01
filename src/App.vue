@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ui-sidebar class="main-sidebar">
+    <ui-sidebar class="main-sidebar" :visible="false" ref="sidebar">
       <div slot="bottom-con">
         <ui-menu class="main-header" :menu="menu"></ui-menu>
       </div>
@@ -99,6 +99,17 @@ img {
       color: #fff;
       padding: 14px;
       display: inline-block;
+    }
+  }
+}
+
+.main-container {
+  .wrapper {
+    &.row {
+      margin: 0;
+      > div[class*="col-"] {
+        padding: 0;
+      }
     }
   }
 }

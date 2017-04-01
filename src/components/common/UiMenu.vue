@@ -1,13 +1,13 @@
 <template>
-    <div class="header">
-      <ul>
-        <li v-for="item in menu">
-          <router-link :to="item.route">
-            {{ item.name }}
-          </router-link>
-        </li>
-      </ul>
-    </div>
+  <div class="header">
+    <ul>
+      <li v-for="item in menu">
+        <router-link :to="item.route">
+          {{ item.name }}
+        </router-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -30,5 +30,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-</style>
