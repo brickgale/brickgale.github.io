@@ -42,8 +42,8 @@ export default {
 
 <style lang="scss">
 .ui-burger-toggler {
-  width: 32px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: relative;
   margin: 0;
   -webkit-transform: rotate(0deg);
@@ -82,10 +82,10 @@ export default {
       top: 0px;
     }
     &:nth-child(3), &:nth-child(4) {
-      top: 10px;
+      top: 8px;
     }
     &:nth-child(5), &:nth-child(6) {
-      top: 20px;
+      top: 16px;
     }
   }
   &.open {
@@ -123,12 +123,12 @@ export default {
 
       &:nth-child(5) {
         left: 5px;
-        top: 13px;
+        top: 10px;
       }
 
       &:nth-child(6) {
         left: calc(50% - 5px);
-        top: 13px;
+        top: 10px;
       }
     }
   }

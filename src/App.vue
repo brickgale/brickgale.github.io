@@ -41,6 +41,10 @@ export default {
     transition: all .4s cubic-bezier(.25,.8,.25,1);
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
   height: 100%;
   font-size: 12px;
