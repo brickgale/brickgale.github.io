@@ -19,13 +19,20 @@ export default {
       this.$emit('burger-toggled')
     },
     toggle() {
+      console.log('toggled')
       if(! this._opened) {
-        this.$el.classList.add('open')
-        this._opened = true
+        this.open()
       } else {
-        this.$el.classList.remove('open')
-        this._opened = false
+        this.close()
       }
+    },
+    open() {
+      this.$el.classList.add('open')
+      this._opened = true
+    },
+    close() {
+      this.$el.classList.remove('open')
+      this._opened = false
     }
   },
   props: {

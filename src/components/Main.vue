@@ -16,7 +16,6 @@
 <script>
 import UiBurgerToggler from './common/UiBurgerToggler.vue'
 
-
 export default {
   name: 'main',
   data () {
@@ -29,19 +28,18 @@ export default {
       this.$parent.$refs.sidebar.toggle()
     },
     handleSidebarOpened() {
-      console.log('opened')
+      this.$refs.toggler.open()
     },
     handleSidebarClosed() {
-
+      this.$refs.toggler.close()
     }
   },
   created() {
-    this.$parent.$on('sidebar-opened', this.handleSidebarOpened)
-    this.$parent.$on('sidebar-closed', this.handleSidebarClosed)
+    this.$parent.$refs.sidebar.$on('sidebar-opened', this.handleSidebarOpened)
+    this.$parent.$refs.sidebar.$on('sidebar-closed', this.handleSidebarClosed)
   },
   mounted() {
-    // this.$parent.$refs.sidebar.$emit('sidebar-opened')
-    // this.$parent.$refs.sidebar.$emit('sidebar-closed')
+
   },
   components: {
     UiBurgerToggler
