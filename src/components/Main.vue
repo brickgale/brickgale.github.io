@@ -59,6 +59,11 @@ export default {
       }
     }
   }
+  &.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   .profile-con {
     img.avatar {
       width: 85px;
