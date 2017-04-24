@@ -108,7 +108,14 @@ img {
 }
 
 .main-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   .wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     &.row {
       margin: 0;
       > div[class*="col-"] {
