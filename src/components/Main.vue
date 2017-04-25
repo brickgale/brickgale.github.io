@@ -3,8 +3,10 @@
       <div class="col-sm-4">
         <ui-burger-toggler @burger-toggled="handleToogle" ref="toggler"></ui-burger-toggler>
         <div class="profile-con">
-          <img class="avatar" src="../assets/monogram.png">
-          <img class="avatar pair" src="../assets/me_avatar.jpg">
+          <div class="pair-avatar">
+            <img class="avatar" src="../assets/monogram.png">
+            <img class="avatar pair" src="../assets/me_avatar.jpg">
+          </div>
         </div>
       </div>
       <div class="col-sm-8">
@@ -64,8 +66,8 @@ export default {
     padding: 10px 0px;
     img.avatar {
       position: relative;
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       // border-radius: 50%;
       // float: left;
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -73,6 +75,14 @@ export default {
       &.pair {
         z-index: 20;
         margin-left: -20px;
+      }
+    }
+    .pair-avatar {
+      text-align: center;
+      &:hover {
+        .pair {
+          margin-left: -3px;
+        }
       }
     }
   }
