@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-burger-toggler" @click="clicked">
+  <div class="ui-burger-toggler white" @click="clicked">
     <span></span><span></span><span></span>
     <span></span><span></span><span></span>
   </div>
@@ -52,6 +52,7 @@ export default {
   width: 20px;
   height: 18px;
   position: relative;
+  z-index: 10;
   margin: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -93,6 +94,11 @@ export default {
     }
     &:nth-child(5), &:nth-child(6) {
       top: 12px;
+    }
+  }
+  &.white {
+    span {
+      background: #fff;
     }
   }
   &.open {

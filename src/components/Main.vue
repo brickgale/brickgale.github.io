@@ -1,15 +1,17 @@
 <template>
   <div class="main wrapper row">
-      <div class="col-sm-4">
-        <ui-burger-toggler @burger-toggled="handleToogle" ref="toggler"></ui-burger-toggler>
-        <div class="profile-con">
-          <div class="pair-avatar">
-            <img class="avatar" src="../assets/monogram.png">
-            <img class="avatar pair" src="../assets/me_avatar.jpg">
+      <div class="col-xs-12 col-sm-4 col-md-3 no-pad side-con">
+        <div class="top-con">
+          <ui-burger-toggler @burger-toggled="handleToogle" ref="toggler"></ui-burger-toggler>
+          <div class="profile-con">
+            <div class="pair-avatar">
+              <img class="avatar" src="../assets/monogram.png">
+              <img class="avatar pair" src="../assets/me_avatar.jpg">
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-8">
+      <div class="col-xs-12 col-sm-8 col-md-9">
 
       </div>
     </div>
@@ -56,10 +58,47 @@ export default {
   &.row {
     > div[class*="col-"] {
       padding: 15px;
-      border-right: 1px solid rgba(0,0,0,0.1);
-      &:last-child {
-        border-right: 0;
+      &.no-pad {
+        padding: 0px;
       }
+    }
+  }
+  .side-con {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  }
+  .top-con {
+    padding: 15px;
+    min-height: 250px;
+    position: relative;
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: rgba(0,0,0,0.3);
+    }
+    &:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.9;
+      background: url('../assets/bg_setup.png') no-repeat center;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      -ms-background-size: cover;
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover;
     }
   }
   .profile-con {
@@ -70,7 +109,7 @@ export default {
       height: 50px;
       // border-radius: 50%;
       // float: left;
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 2px rgba(255,255,255, 0.12), 0 2px 10px rgba(255,255,255, 0.2);
       z-index: 10;
       &.pair {
         z-index: 20;
