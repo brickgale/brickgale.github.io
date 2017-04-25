@@ -80,6 +80,8 @@ export default {
       height: 100%;
       z-index: 2;
       background: rgba(0,0,0,0.3);
+      background: linear-gradient(to bottom right,#002f4b,#dc4225);
+      opacity: 0.5;
     }
     &:after {
       content: ' ';

@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <ui-sidebar class="main-sidebar" :visible="false" ref="sidebar">
+      <div slot="top-con">
+        <div class="logo-con">
+          <img class="avatar" src="./assets/monogram_white.png">
+        </div>
+      </div>
       <div slot="bottom-con">
         <ui-menu class="main-header" :menu="menu"></ui-menu>
       </div>
@@ -94,15 +99,24 @@ img {
 
 .main-header {
   text-align: center;
-  background-color: #3e3f43;
-  // background: #232526; /* fallback for old browsers */
-  // background: -webkit-linear-gradient(to top, #232526 , #414345); 
-  // background: linear-gradient(to top, #232526 , #414345); 
   li {
     a { 
       color: #fff;
       padding: 14px;
       display: inline-block;
+    }
+  }
+}
+
+.main-sidebar {
+  .ui-sidebar-content {
+    background: linear-gradient(to bottom, #252424, #565150);
+    .logo-con {
+      text-align: center;
+      padding: 30px;
+      img.avatar {
+        width: 90px;
+      }
     }
   }
 }
