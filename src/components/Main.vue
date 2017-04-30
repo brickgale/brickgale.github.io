@@ -12,7 +12,9 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-8 col-md-9">
-
+        <div class="chart-skills">
+          <chart :options="skillRadar" auto-resize></chart>
+        </div>
       </div>
     </div>
   </div>
@@ -20,12 +22,37 @@
 
 <script>
 import UiBurgerToggler from './common/UiBurgerToggler.vue'
+import ECharts from 'vue-echarts/components/ECharts.vue'
+
+import 'echarts/lib/chart/radar'
 
 export default {
   name: 'main',
   data () {
     return {
-
+      skillRadar: { 
+        title: {
+          text: 'Skills'
+        },
+        tooltip: {},
+        radar: {
+          indicator: [
+            { name: 'PHP', max: 10 },
+            { name: 'Javascript', max: 10 },
+            { name: 'HTML', max: 10 },
+            { name: 'CSS', max: 10 },
+            { name: 'PHP', max: 10 },
+            { name: 'PHP', max: 10 }
+          ]
+        },
+        series: [{
+          name: 'Skills',
+          type: 'radar',
+          data: [
+            { value: [10, 9, 8, 7, 8, 9] }
+          ]
+        }]
+      }
     }
   },
   methods: {
@@ -47,7 +74,8 @@ export default {
 
   },
   components: {
-    UiBurgerToggler
+    UiBurgerToggler,
+    chart: ECharts
   }
 }
 </script>
