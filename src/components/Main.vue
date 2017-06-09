@@ -13,7 +13,7 @@
       </div>
       <div class="col-xs-12 col-sm-8 col-md-9">
         <div class="chart-skills">
-          <chart :options="skillRadar" auto-resize></chart>
+          <chart :options="skillRadar" ref="skills_radar" auto-resize></chart>
         </div>
       </div>
     </div>
@@ -25,12 +25,13 @@ import UiBurgerToggler from './common/UiBurgerToggler.vue'
 import ECharts from 'vue-echarts/components/ECharts.vue'
 
 import 'echarts/lib/chart/radar'
+import 'echarts/lib/component/title'
 
 export default {
   name: 'main',
   data () {
     return {
-      skillRadar: { 
+      skillRadar: {
         title: {
           text: 'Skills'
         },
@@ -71,7 +72,6 @@ export default {
     this.$parent.$refs.sidebar.$on('sidebar-closed', this.handleSidebarClosed)
   },
   mounted() {
-
   },
   components: {
     UiBurgerToggler,
@@ -152,6 +152,17 @@ export default {
         .pair {
           margin-left: -3px;
         }
+      }
+    }
+  }
+  .chart-skills {
+    width: 100%;
+    .echarts {
+      width: 100%;
+      margin: 0 auto;
+      @media (max-width: 500px) {
+        width: 100%;
+        height: 75vw;
       }
     }
   }

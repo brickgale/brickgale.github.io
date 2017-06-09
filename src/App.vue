@@ -39,6 +39,17 @@ export default {
 </script>
 
 <style lang="scss">
+// @font-face {
+//   font-family: 'Circular Std Book';
+//   src: url('assets/fonts/CircularStd-Book.eot');
+//   src: url('assets/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+//     url('assets/fonts/CircularStd-Book.woff') format('woff'),
+//     url('assets/fonts/CircularStd-Book.ttf') format('truetype');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
 *:not(body),
 *::before,
 *::after {
@@ -53,6 +64,7 @@ html {
 body {
   height: 100%;
   font-size: 12px;
+  // font-family: 'Circular Std Book';
   font-family: 'Varela Round', sans-serif;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
