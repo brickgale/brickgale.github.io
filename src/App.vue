@@ -39,15 +39,25 @@ export default {
 </script>
 
 <style lang="scss">
-// @font-face {
-//   font-family: 'Circular Std Book';
-//   src: url('assets/fonts/CircularStd-Book.eot');
-//   src: url('assets/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
-//     url('assets/fonts/CircularStd-Book.woff') format('woff'),
-//     url('assets/fonts/CircularStd-Book.ttf') format('truetype');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'CircularStdBook';
+  src: url('./assets/fonts/CircularStd-Book.eot');
+  src: url('./assets/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/CircularStd-Book.woff') format('woff'),
+    url('./assets/fonts/CircularStd-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circular Std Black';
+  src: url('./assets/fonts/CircularStd-Black.eot');
+  src: url('./assets/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/CircularStd-Black.woff') format('woff'),
+    url('./assets/fonts/CircularStd-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 *:not(body),
@@ -64,15 +74,11 @@ html {
 body {
   height: 100%;
   font-size: 12px;
-  // font-family: 'Circular Std Book';
-  font-family: 'Varela Round', sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  height: 100%;
-  font-size: 12px;
+  font-family: 'CircularStdBook';
+  // font-family: 'Varela Round', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.42em;
   color: #3e3f43;
   margin: 0;
 }
@@ -102,6 +108,7 @@ li {
 
 a {
   color: #3e3f43;
+  font-weight: normal;
   text-decoration: none;
 }
 
@@ -113,6 +120,7 @@ img {
   text-align: center;
   li {
     a { 
+      font-family: 'CircularStdBook';
       color: #fff;
       padding: 14px;
       display: inline-block;

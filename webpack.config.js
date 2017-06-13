@@ -35,7 +35,7 @@ module.exports = {
         exclude: /node_modules(?![\\/]vue-echarts[\\/])/,
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
