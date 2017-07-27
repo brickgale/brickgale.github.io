@@ -2,7 +2,7 @@
   <div class="header">
     <ul>
       <li v-for="item in menu">
-        <router-link :to="item.route">
+        <router-link :to="{ name: item.route }">
           {{ item.name }}
         </router-link>
       </li>

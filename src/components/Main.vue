@@ -12,6 +12,7 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-8 col-md-9">
+        <router-view></router-view>
         <!-- <div class="chart-skills">
           <chart :options="skillRadar" ref="skills_radar" auto-resize></chart>
         </div> -->

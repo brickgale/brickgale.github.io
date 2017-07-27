@@ -25,9 +25,9 @@ export default {
   data () {
     return {
       menu: [
-        { name: 'About', route: '/' },
-        { name: 'Projects', route: '/' },
-        { name: 'Blog', route: '/' }
+        { name: 'About', route: 'home' },
+        { name: 'Projects', route: 'projects' },
+        { name: 'Blog', route: 'blog' }
       ]
     }
   },
