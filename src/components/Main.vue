@@ -1,6 +1,6 @@
 <template>
   <div class="main wrapper row">
-      <div class="col-xs-12 col-sm-4 col-md-3 no-pad side-con">
+      <div class="side-con">
         <div class="top-con">
           <ui-burger-toggler @burger-toggled="handleToogle" ref="toggler"></ui-burger-toggler>
           <div class="profile-con">
@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-8 col-md-9">
+      <div class="main-con">
         <router-view></router-view>
         <!-- <div class="chart-skills">
           <chart :options="skillRadar" ref="skills_radar" auto-resize></chart>
@@ -84,6 +84,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .main {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+  }
   &.row {
     > div[class*="col-"] {
       padding: 15px;
@@ -94,6 +99,24 @@ export default {
   }
   .side-con {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+    width: 260px;
+    flex: 0 0 260px;
+    height: 100%;
+    @media (max-width: 500px) {
+      width: 100%;
+      flex-basis: 100%;
+      flex: 0 0 auto;
+      height: auto;
+    }
+  }
+  .main-con {
+    width: 100%;
+    @media (max-width: 500px) {
+      width: 100%;
+      flex-basis: 100%;
+      flex: 0 0 auto;
+      height: 100%;
+    }
   }
   .top-con {
     padding: 15px;
