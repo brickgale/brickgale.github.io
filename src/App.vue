@@ -50,6 +50,16 @@ export default {
 }
 
 @font-face {
+  font-family: 'Circular Std Bold';
+  src: url('./assets/fonts/CircularStd-Bold.eot');
+  src: url('./assets/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./assets/fonts/CircularStd-Bold.woff') format('woff'),
+    url('./assets/fonts/CircularStd-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Circular Std Black';
   src: url('./assets/fonts/CircularStd-Black.eot');
   src: url('./assets/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
@@ -91,8 +101,9 @@ body {
     display: none;
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
   font-weight: normal;
+  margin: 0px;
 }
 
 ul {

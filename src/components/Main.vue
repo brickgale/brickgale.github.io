@@ -8,6 +8,13 @@
               <img class="avatar" src="../assets/monogram.png">
               <img class="avatar pair" src="../assets/me_avatar.jpg">
             </div>
+            <div class="name">Brian Monsales</div>
+            <div class="position">Fullstack Web Engineer</div>
+            <div class="social-icons">
+              <a v-for="item in socialIcons" :href="item.link">
+                <i :class="item.class" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -32,6 +39,28 @@ export default {
   name: 'main',
   data () {
     return {
+      socialIcons: [
+        { 
+          link: 'https://github.com/brickgale',
+          class: 'fa fa-github'
+        },
+        { 
+          link: 'https://www.facebook.com/brian.monsales',
+          class: 'fa fa-facebook'
+        },
+        { 
+          link: 'https://www.linkedin.com/in/brianmonsales',
+          class: 'fa fa-linkedin'
+        },
+        { 
+          link: 'https://www.behance.net/brickgale',
+          class: 'fa fa-behance'
+        },
+        { 
+          link: 'https://dribbble.com/brickgale',
+          class: 'fa fa-dribbble'
+        },
+      ],
       skillRadar: {
         title: {
           text: 'Skills'
@@ -110,6 +139,7 @@ export default {
     }
   }
   .main-con {
+    padding: 30px;
     width: 100%;
     @media (max-width: 500px) {
       width: 100%;
@@ -132,7 +162,7 @@ export default {
       height: 100%;
       z-index: 2;
       background: rgba(0,0,0,0.3);
-      background: linear-gradient(to bottom right,#002f4b,#dc4225);
+      background: linear-gradient(to bottom right,#002f4b,#ffffff);
       opacity: 0.5;
     }
     &:after {
@@ -157,14 +187,18 @@ export default {
   }
   .profile-con {
     padding: 10px 0px;
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center;
     img.avatar {
-      position: relative;
       width: 50px;
       height: 50px;
       // border-radius: 50%;
       // float: left;
       box-shadow: 0 0 2px rgba(255,255,255, 0.12), 0 2px 10px rgba(255,255,255, 0.2);
-      z-index: 10;
       &.pair {
         z-index: 20;
         margin-left: -20px;
@@ -175,6 +209,26 @@ export default {
       &:hover {
         .pair {
           margin-left: -3px;
+        }
+      }
+    }
+    .name {
+      line-height: 3.5em;
+    }
+    .position {
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+    .social-icons {
+      padding: 20px;
+      a {
+        color: #fff;
+        margin-right: 10px;
+        .fa {
+          font-size: 16px;
+        }
+        &:last-child {
+          margin-right: 0px;
         }
       }
     }
