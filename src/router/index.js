@@ -16,7 +16,6 @@ export default new Router({
   	},
     {
       path: '/brickgale',
-      name: 'home',
       component: Main,
       children: [
       	{

@@ -25,7 +25,7 @@ export default {
   data () {
     return {
       menu: [
-        { name: 'About', route: 'home' },
+        { name: 'About', route: 'about' },
         { name: 'Projects', route: 'projects' },
         { name: 'Blog', route: 'blog' }
       ]
@@ -128,6 +128,8 @@ img {
 }
 
 .main-header {
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
   text-align: center;
   li {
     a { 
@@ -157,10 +159,16 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  @media (max-width: 500px) {
+    overflow: auto;
+  }
   .wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
+    @media (max-width: 500px) {
+      height: auto;
+    }
     &.row {
       margin: 0;
       > div[class*="col-"] {

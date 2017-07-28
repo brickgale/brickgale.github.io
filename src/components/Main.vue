@@ -131,6 +131,7 @@ export default {
     width: 260px;
     flex: 0 0 260px;
     height: 100%;
+    overflow: auto;
     @media (max-width: 500px) {
       width: 100%;
       flex-basis: 100%;
@@ -139,8 +140,15 @@ export default {
     }
   }
   .main-con {
-    padding: 30px;
+    position: relative;
     width: 100%;
+    height: 100%;
+    overflow: auto;
+    > div {
+      padding: 30px;
+      width: 100%;
+      min-height: 100%;
+    }
     @media (max-width: 500px) {
       width: 100%;
       flex-basis: 100%;
@@ -150,6 +158,7 @@ export default {
   }
   .top-con {
     padding: 15px;
+    // min-height: 100%;
     min-height: 250px;
     position: relative;
     &:before {

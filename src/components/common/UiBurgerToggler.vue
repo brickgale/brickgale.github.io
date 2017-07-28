@@ -19,7 +19,6 @@ export default {
       this.$emit('burger-toggled')
     },
     toggle() {
-      console.log('toggled')
       if(! this._opened) {
         this.open()
       } else {
