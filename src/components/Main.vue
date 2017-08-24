@@ -11,7 +11,7 @@
             <div class="name">Brian Monsales</div>
             <div class="position">Fullstack Web Engineer</div>
             <div class="social-icons">
-              <a v-for="item in socialIcons" :href="item.link">
+              <a v-for="item in socialIcons" :href="item.link" target="_blank">
                 <i :class="item.class" aria-hidden="true"></i>
               </a>
             </div>
@@ -148,6 +148,11 @@ export default {
       padding: 30px;
       width: 100%;
       min-height: 100%;
+      &.np {
+        padding: 0px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
     }
     @media (max-width: 500px) {
       width: 100%;

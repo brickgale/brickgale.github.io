@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ui-sidebar class="main-sidebar" :visible="false" ref="sidebar">
+    <ui-sidebar class="main-sidebar" :visible="false" ref="sidebar" :m-mode="true">
       <div slot="top-con">
         <div class="logo-con">
           <img class="avatar" src="./assets/monogram_white.png">
@@ -85,6 +85,7 @@ body {
   height: 100%;
   font-size: 12px;
   font-family: 'CircularStdBook';
+  display: flex;
   // font-family: 'Varela Round', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

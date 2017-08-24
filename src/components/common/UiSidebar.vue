@@ -31,7 +31,11 @@ export default {
             type: Boolean,
             default: true
         },
-		positionRight: {
+        positionRight: {
+            type: Boolean,
+            default: false
+        },
+		mMode: {
 			type: Boolean,
 			default: false
 		}
@@ -52,9 +56,13 @@ export default {
             this.open();
         },
         open() {
+            console.log(this.mMode)
             this._visible = true
             if(this.$el) {
                 this.$el.classList.add('opened')
+                if(this.mMode) {
+                    this.$el.classList.add('m-mode')
+                }
             }
             this.$emit('sidebar-opened')
         },
@@ -62,6 +70,9 @@ export default {
             this._visible = false;
             if(this.$el) {
                 this.$el.classList.remove('opened')
+                if(this.mMode) {
+                    this.$el.classList.remove('m-mode')
+                }
             }
             this.$emit('sidebar-closed');
         },
@@ -165,6 +176,12 @@ export default {
     &.opened {
         .ui-sidebar-backdrop {
             @media (max-width:1024px) {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+        &.m-mode {
+            .ui-sidebar-backdrop {
                 opacity: 1;
                 pointer-events: auto;
             }
