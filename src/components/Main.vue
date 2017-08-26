@@ -8,9 +8,9 @@
               <img class="avatar" src="../assets/monogram.png">
               <img class="avatar pair" src="../assets/me_avatar.jpg">
             </div>
-            <div class="name">Brian Monsales</div>
-            <div class="position">Fullstack Web Engineer</div>
-            <div class="social-icons">
+            <div class="name hide-on-mobile">Brian Monsales</div>
+            <div class="position hide-on-mobile">Fullstack Web Engineer</div>
+            <div class="social-icons hide-on-mobile">
               <a v-for="item in socialIcons" :href="item.link" target="_blank">
                 <i :class="item.class" aria-hidden="true"></i>
               </a>
@@ -115,7 +115,7 @@ export default {
 .main {
   flex-wrap: nowrap;
   align-items: flex-start;
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     flex-wrap: wrap;
   }
   &.row {
@@ -132,11 +132,13 @@ export default {
     flex: 0 0 260px;
     height: 100%;
     overflow: auto;
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       width: 100%;
       flex-basis: 100%;
       flex: 0 0 auto;
       height: auto;
+      overflow: inherit;
+      margin-bottom: 25px;
     }
   }
   .main-con {
@@ -154,7 +156,7 @@ export default {
         margin: 0 auto;
       }
     }
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       width: 100%;
       flex-basis: 100%;
       flex: 0 0 auto;
@@ -166,6 +168,10 @@ export default {
     // min-height: 100%;
     min-height: 250px;
     position: relative;
+    @media (max-width: 768px) {
+      min-height: auto;
+      height: 45px;
+    }
     &:before {
       content: ' ';
       display: block;
@@ -207,12 +213,16 @@ export default {
     font-size: 13px;
     letter-spacing: 1px;
     text-align: center;
+    @media (max-width: 768px) {
+      margin-top: -25px;
+    }
     img.avatar {
       width: 50px;
       height: 50px;
       // border-radius: 50%;
       // float: left;
-      box-shadow: 0 0 2px rgba(255,255,255, 0.12), 0 2px 10px rgba(255,255,255, 0.2);
+      box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
+
       &.pair {
         z-index: 20;
         margin-left: -20px;
@@ -252,7 +262,7 @@ export default {
     .echarts {
       width: 100%;
       margin: 0 auto;
-      @media (max-width: 500px) {
+      @media (max-width: 768px) {
         width: 100%;
         height: 75vw;
       }

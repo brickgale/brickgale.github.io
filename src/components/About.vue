@@ -3,14 +3,21 @@
     <!-- <h1>About</h1> -->
     <div class="wrapper-con">
       <div class="graphic-header-con">
-        <div class="g-content">
+      </div>
 
+      <div class="g-content">
+        <div class="row center-xs">
+          <div class="col-xs-10 col-md-6">
+            <div class="g-avatar-con">
+              <img class="g-avatar" src="../assets/me_avatar.jpg">
+            </div>
+            <div class="g-menu">
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- <div class="graphic-con">
-      <img class="big_avatar" src="../assets/me_avatar_no_bg_grayscale.png">
-    </div> -->
   </div>
 </template>
 
@@ -62,6 +69,9 @@ export default {
   .graphic-header-con {
     position: relative;
     min-height: 200px;
+    border-radius: 3px;
+    overflow: hidden;
+      box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
     &:before {
       content: ' ';
       display: block;
@@ -93,6 +103,31 @@ export default {
       -moz-background-size: cover;
       -webkit-background-size: cover;
       background-size: cover;
+    }
+  }
+  .g-content {
+    margin-top: -80px;
+    position: relative;
+    z-index: 3;
+    .g-avatar-con {
+      max-width: 85px;
+      max-height: 85px;
+      border-radius: 3px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
+      position: relative;
+      overflow: hidden;
+      .g-avatar {
+
+      }
+    }
+    .g-menu {
+      min-height: 120px;
+      margin-top: -50px;
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
     }
   }
 }

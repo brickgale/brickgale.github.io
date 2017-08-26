@@ -128,6 +128,12 @@ img {
   width: 100%;
 }
 
+.hide-on-mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .main-header {
   border-top: 1px solid #474747;
   border-bottom: 1px solid #474747;
@@ -160,14 +166,14 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  @media (max-width: 500px) {
+  @media (max-width: 768px) {
     overflow: auto;
   }
   .wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
       height: auto;
     }
     &.row {

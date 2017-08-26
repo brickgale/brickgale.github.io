@@ -51,7 +51,7 @@ export default {
   width: 20px;
   height: 18px;
   position: relative;
-  z-index: 10;
+  z-index: 11;
   margin: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
