@@ -9,7 +9,10 @@
         <div class="row center-xs">
           <div class="col-xs-10 col-md-6">
             <div class="g-avatar-con">
-              <img class="g-avatar" src="../assets/me_avatar.jpg">
+              <lightbox
+                thumbnail="./src/assets/me_nck.jpg"
+                :images="['./src/assets/me_nck.jpg']"
+              ></lightbox>
             </div>
             <div class="g-menu">
 
@@ -108,7 +111,7 @@ export default {
   .g-content {
     margin-top: -80px;
     position: relative;
-    z-index: 3;
+    z-index: 30;
     .g-avatar-con {
       max-width: 85px;
       max-height: 85px;
@@ -118,7 +121,7 @@ export default {
       box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
       position: relative;
       overflow: hidden;
-      .g-avatar {
+      .img {
 
       }
     }

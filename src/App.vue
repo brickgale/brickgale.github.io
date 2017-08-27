@@ -183,5 +183,14 @@ img {
       }
     }
   }
+  .lightbox {
+    z-index: 30;
+  }
+  .lightbox__image img {
+      width: auto;
+      height: auto !important;
+      max-width: 100%;
+      max-height: calc(100vh - 140px);
+  }
 }
 </style>
