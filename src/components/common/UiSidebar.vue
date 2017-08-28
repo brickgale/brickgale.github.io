@@ -141,10 +141,12 @@ export default {
         will-change: transform;
         
         .router-link-active {
-          &.router-link-exact-active {
             font-family: 'CircularStdBold';
             color: #00abff;
-          }
+          // &.router-link-exact-active {
+          //   font-family: 'CircularStdBold';
+          //   color: #00abff;
+          // }
         }
     }
     &.ui-sidebar-left .ui-sidebar-content{
