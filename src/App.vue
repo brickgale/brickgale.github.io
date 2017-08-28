@@ -50,7 +50,7 @@ export default {
 }
 
 @font-face {
-  font-family: 'Circular Std Bold';
+  font-family: 'CircularStdBold';
   src: url('./assets/fonts/CircularStd-Bold.eot');
   src: url('./assets/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
     url('./assets/fonts/CircularStd-Bold.woff') format('woff'),
@@ -60,7 +60,7 @@ export default {
 }
 
 @font-face {
-  font-family: 'Circular Std Black';
+  font-family: 'CircularStdBlack';
   src: url('./assets/fonts/CircularStd-Black.eot');
   src: url('./assets/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
     url('./assets/fonts/CircularStd-Black.woff') format('woff'),

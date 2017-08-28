@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="ui-menu">
     <ul>
       <li v-for="item in menu">
         <router-link :to="{ name: item.route }">
@@ -26,7 +26,6 @@ export default {
       }
     }
   }
-
 }
 </script>
 

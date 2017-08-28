@@ -142,7 +142,7 @@ export default {
         
         .router-link-active {
           &.router-link-exact-active {
-            font-family: 'Circular Std Bold';
+            font-family: 'CircularStdBold';
             color: #00abff;
           }
         }

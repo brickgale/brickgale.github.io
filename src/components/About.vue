@@ -14,22 +14,30 @@
                 :images="['./src/assets/me_nck.jpg']"
               ></lightbox>
             </div>
-            <div class="g-menu">
-
+            <div class="g-menu-con">
+              <ui-menu class="g-menu" :menu="menu"></ui-menu>
             </div>
           </div>
         </div>
       </div>
+
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
+import UiMenu from './common/UiMenu.vue'
+
 export default {
   name: 'main',
   data () {
     return {
-
+      menu: [
+        { name: 'Skills', route: 'about-skills' },
+        { name: 'Hobbies', route: 'about-hobbies' },
+        { name: 'Misc', route: 'about-misc' }
+      ]
     }
   },
   methods: {
@@ -39,15 +47,16 @@ export default {
 
   },
   mounted() {
+
   },
   components: {
-
+    UiMenu
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style lang="scss">
 .about {
   position: relative;
   .graphic-con {
@@ -98,7 +107,7 @@ export default {
       height: 100%;
       z-index: 1;
       opacity: 0.9;
-      background: url('../assets/bg_codes.png') no-repeat center;
+      background: url('/src/assets/bg_codes2.jpeg') no-repeat center;
       background-repeat: no-repeat;
       background-position: 50% 0;
       -ms-background-size: cover;
@@ -125,12 +134,35 @@ export default {
 
       }
     }
-    .g-menu {
-      min-height: 120px;
+    .g-menu-con {
+      min-height: 110px;
       margin-top: -50px;
       background: #fff;
       border-radius: 3px;
       box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
+      padding-top: 50px;
+      .g-menu.ui-menu {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        li {
+          border-top: 1px solid rgba(0,0,0,0.2);
+          border-left: 1px solid rgba(0,0,0,0.2);
+          a {
+            font-family: 'CircularStdBook';
+            padding: 14px;
+            display: inline-block;
+            font-stretch: normal;
+            &.router-link-active {
+              &.router-link-exact-active {
+                font-family: 'CircularStdBold';
+              }
+            }
+          }
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
     }
   }
 }
