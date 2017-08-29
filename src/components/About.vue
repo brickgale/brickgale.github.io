@@ -148,13 +148,13 @@ export default {
           border-top: 1px solid rgba(0,0,0,0.2);
           border-left: 1px solid rgba(0,0,0,0.2);
           a {
-            font-family: 'CircularStdBook';
-            padding: 14px;
+            font-family: 'CircularStdBold';
+            padding: 10px;
             display: inline-block;
             font-stretch: normal;
             &.router-link-active {
               &.router-link-exact-active {
-                font-family: 'CircularStdBold';
+                color: #00abff;
               }
             }
           }

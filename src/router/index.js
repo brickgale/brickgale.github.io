@@ -21,8 +21,12 @@ export default new Router({
       path: '/brickgale',
       component: Main,
       children: [
+        {
+          path: '',
+          redirect: '/brickgale/about'
+        },
       	{
-      		path: '',
+      		path: 'about',
 	      	name: 'about',
 	      	component: About,
           children: [
