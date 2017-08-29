@@ -140,10 +140,12 @@ img {
   text-align: center;
   li {
     a { 
-      font-family: 'CircularStdBook';
-      color: #fff;
+      color: #a5a5a5;
       padding: 14px;
       display: inline-block;
+      &.router-link-active {
+        color: #00abff;
+      }
     }
   }
 }

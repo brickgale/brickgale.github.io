@@ -139,15 +139,6 @@ export default {
         transition: all .4s cubic-bezier(.25,.8,.25,1);
         transition-property: transform;
         will-change: transform;
-        
-        .router-link-active {
-            font-family: 'CircularStdBold';
-            color: #00abff;
-          // &.router-link-exact-active {
-          //   font-family: 'CircularStdBold';
-          //   color: #00abff;
-          // }
-        }
     }
     &.ui-sidebar-left .ui-sidebar-content{
         left: 0;
