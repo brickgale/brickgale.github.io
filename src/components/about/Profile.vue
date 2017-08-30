@@ -1,12 +1,12 @@
 <template>
-  <div class="about-hobbies np">
+  <div class="about-profile np">
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about-hobbies',
+  name: 'about-profile',
   data () {
     return {
       

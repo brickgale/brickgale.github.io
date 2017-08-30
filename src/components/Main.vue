@@ -20,9 +20,6 @@
       </div>
       <div class="main-con">
         <router-view></router-view>
-        <!-- <div class="chart-skills">
-          <chart :options="skillRadar" ref="skills_radar" auto-resize></chart>
-        </div> -->
       </div>
     </div>
   </div>
@@ -30,10 +27,6 @@
 
 <script>
 import UiBurgerToggler from './common/UiBurgerToggler.vue'
-import ECharts from 'vue-echarts/components/ECharts.vue'
-
-import 'echarts/lib/chart/radar'
-import 'echarts/lib/component/title'
 
 export default {
   name: 'main',
@@ -60,30 +53,7 @@ export default {
           link: 'https://dribbble.com/brickgale',
           class: 'fa fa-dribbble'
         },
-      ],
-      skillRadar: {
-        title: {
-          text: 'Skills'
-        },
-        tooltip: {},
-        radar: {
-          indicator: [
-            { name: 'PHP', max: 10 },
-            { name: 'Javascript', max: 10 },
-            { name: 'HTML', max: 10 },
-            { name: 'CSS', max: 10 },
-            { name: 'PHP', max: 10 },
-            { name: 'PHP', max: 10 }
-          ]
-        },
-        series: [{
-          name: 'Skills',
-          type: 'radar',
-          data: [
-            { value: [10, 9, 8, 7, 8, 9] }
-          ]
-        }]
-      }
+      ]
     }
   },
   methods: {
@@ -102,16 +72,15 @@ export default {
     this.$parent.$refs.sidebar.$on('sidebar-closed', this.handleSidebarClosed)
   },
   mounted() {
+
   },
   components: {
-    UiBurgerToggler,
-    chart: ECharts
+    UiBurgerToggler
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style lang="scss">
 .main {
   flex-wrap: nowrap;
   align-items: flex-start;
@@ -254,17 +223,6 @@ export default {
         &:last-child {
           margin-right: 0px;
         }
-      }
-    }
-  }
-  .chart-skills {
-    width: 100%;
-    .echarts {
-      width: 100%;
-      margin: 0 auto;
-      @media (max-width: 768px) {
-        width: 100%;
-        height: 75vw;
       }
     }
   }

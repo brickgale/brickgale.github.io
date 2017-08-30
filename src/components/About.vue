@@ -35,7 +35,7 @@ export default {
     return {
       menu: [
         { name: 'Skills', route: 'about-skills' },
-        { name: 'Hobbies', route: 'about-hobbies' },
+        { name: 'Profile', route: 'about-profile' },
         { name: 'Misc', route: 'about-misc' }
       ]
     }

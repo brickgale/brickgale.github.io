@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <ui-sidebar class="main-sidebar" :visible="false" ref="sidebar" :m-mode="true">
       <div slot="top-con">
         <div class="logo-con">
@@ -193,6 +193,12 @@ img {
       height: auto !important;
       max-width: 100%;
       max-height: calc(100vh - 140px);
+  }
+  .box-con {
+    min-height: 100px;
+    box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
+    position: relative;
+    overflow: hidden;
   }
 }
 </style>

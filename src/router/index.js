@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Main from '../components/Main.vue'
 import About from '../components/About.vue'
 import AboutSkills from '../components/About/Skills.vue'
-import AboutHobbies from '../components/About/Hobbies.vue'
+import AboutProfile from '../components/About/Profile.vue'
 import AboutMisc from '../components/About/Misc.vue'
 import Projects from '../components/Projects.vue'
 import Blog from '../components/Blog.vue'
@@ -32,13 +32,13 @@ export default new Router({
           children: [
             {
               path: '',
-              name: 'about-skills',
-              component: AboutSkills
+              name: 'about-profile',
+              component: AboutProfile
             },
             {
-              path: 'hobbies',
-              name: 'about-hobbies',
-              component: AboutHobbies
+              path: 'skills',
+              name: 'about-skills',
+              component: AboutSkills
             },
             {
               path: 'misc',
