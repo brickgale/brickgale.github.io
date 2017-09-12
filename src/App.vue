@@ -201,4 +201,76 @@ img {
     overflow: hidden;
   }
 }
+
+ul.timeline {
+  margin: 0;
+  list-style: none;
+  position: relative;
+  padding-left: 55px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  &:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed #3e3f43;
+  }
+  li {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0px 14px;
+    width: 100%;
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+    > span {
+      width: 2px;
+      height: 100%;
+      background: #3e3f43;
+      left: 0;
+      top: 0;
+      position: absolute;
+      &:before, &:after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 2px solid #3e3f43;
+        position: absolute;
+        background: #00abff;
+        left: -3px;
+        top: 0;
+      }
+    }
+    span:after {
+      top: 100%;
+      > div {
+        margin-left: 10px;
+      }
+    }
+    span.timestamp {
+      height: 100%;
+      span {
+        position: absolute;
+        font-size: 10px;
+        left: -55px;
+        font-weight: bold;
+        margin-top: -3px;
+        &:first-child {
+          top: 0;
+        }
+        &:last-child {
+          top: 100%;
+        }
+      }
+    }
+    div.content {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+  }
+}
 </style>
