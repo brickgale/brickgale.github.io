@@ -214,7 +214,7 @@ ul.timeline {
     width: 1px;
     height: 100%;
     position: absolute;
-    border-left: 2px dashed #3e3f43;
+    border-left: 1px dashed #c0c0c0;
   }
   li {
     position: relative;
@@ -225,21 +225,21 @@ ul.timeline {
       margin-top: 32px;
     }
     > span {
-      width: 2px;
+      width: 1px;
       height: 100%;
-      background: #3e3f43;
+      background: #c0c0c0;
       left: 0;
       top: 0;
       position: absolute;
       &:before, &:after {
-        content: '';
-        width: 8px;
-        height: 8px;
+        content: "";
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
-        border: 2px solid #3e3f43;
+        border: 3px solid #fff;
         position: absolute;
         background: #00abff;
-        left: -3px;
+        left: -5px;
         top: 0;
       }
     }
@@ -255,7 +255,6 @@ ul.timeline {
         position: absolute;
         font-size: 10px;
         left: -55px;
-        font-weight: bold;
         margin-top: -3px;
         &:first-child {
           top: 0;

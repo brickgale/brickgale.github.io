@@ -14,7 +14,7 @@
                 <p class="sub">Tagbilaran City, Bohol</p>
               </div>
               <span class="timestamp">
-                <span>20013</span>
+                <span>2013</span>
                 <span>2009</span>
               </span>
             </li>
