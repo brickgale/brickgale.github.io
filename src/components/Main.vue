@@ -60,16 +60,16 @@ export default {
     handleToogle() {
       this.$parent.$refs.sidebar.toggle()
     },
-    handleSidebarOpened() {
+    handleOpened() {
       this.$refs.toggler.open()
     },
-    handleSidebarClosed() {
+    handleClosed() {
       this.$refs.toggler.close()
-    }
+    },
   },
   created() {
-    this.$parent.$refs.sidebar.$on('sidebar-opened', this.handleSidebarOpened)
-    this.$parent.$refs.sidebar.$on('sidebar-closed', this.handleSidebarClosed)
+    this.$parent.$refs.sidebar.$on('sidebar-opened', this.handleOpened)
+    this.$parent.$refs.sidebar.$on('sidebar-closed', this.handleClosed)
   },
   mounted() {
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-burger-toggler white" @click="clicked">
+  <div class="ui-burger-toggler white" @click="toggle">
     <span></span><span></span><span></span>
     <span></span><span></span><span></span>
   </div>
@@ -14,24 +14,23 @@ export default {
     }
   },
   methods: {
-    clicked() {
-      this.toggle()
-      this.$emit('burger-toggled')
-    },
     toggle() {
       if(! this._opened) {
         this.open()
       } else {
         this.close()
       }
+      this.$emit('burger-toggled')
     },
     open() {
       this.$el.classList.add('open')
       this._opened = true
+      this.$emit('burger-opened')
     },
     close() {
       this.$el.classList.remove('open')
       this._opened = false
+      this.$emit('burger-closed')
     }
   },
   props: {

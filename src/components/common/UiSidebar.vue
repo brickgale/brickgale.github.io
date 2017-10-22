@@ -42,13 +42,7 @@ export default {
 	},
 
     created() {
-        this.$on('sidebar-opened', this.handleOpened)
-        this.$on('sidebar-closed', this.handleClosed)
-    },
 
-    beforeDestroy() {
-        this.$off('sidebar-opened', this.handleOpened)
-        this.$off('sidebar-closed', this.handleClosed)
     },
 
 	methods: {
@@ -56,7 +50,6 @@ export default {
             this.open();
         },
         open() {
-            console.log(this.mMode)
             this._visible = true
             if(this.$el) {
                 this.$el.classList.add('opened')
@@ -64,6 +57,7 @@ export default {
                     this.$el.classList.add('m-mode')
                 }
             }
+            this.handleOpened()
             this.$emit('sidebar-opened')
         },
         close() {
@@ -74,7 +68,8 @@ export default {
                     this.$el.classList.remove('m-mode')
                 }
             }
-            this.$emit('sidebar-closed');
+            this.handleClosed()
+            this.$emit('sidebar-closed')
         },
 		toggle() {
             if(this._visible) {
@@ -82,6 +77,7 @@ export default {
             } else {
                 this.open()
             }
+            this.$emit('sidebar-toggled')
 		},
         handleResize() {
             this.fullWidth = document.documentElement.clientWidth
