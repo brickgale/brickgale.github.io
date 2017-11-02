@@ -1,9 +1,10 @@
 <template>
-  <div class="about np">
+  <div class="about">
     <!-- <h1>About</h1> -->
+    <div class="graphic-header-con">
+    </div>
+
     <div class="wrapper-con">
-      <div class="graphic-header-con">
-      </div>
 
       <div class="g-content">
         <div class="row center-xs">
@@ -76,14 +77,15 @@ export default {
     }
   }
   .wrapper-con {
-    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 30px;
   }
   .graphic-header-con {
     position: relative;
     min-height: 200px;
-    border-radius: 3px;
     overflow: hidden;
-      box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
     &:before {
       content: ' ';
       display: block;

@@ -107,7 +107,6 @@ export default {
       flex: 0 0 auto;
       height: auto;
       overflow: inherit;
-      margin-bottom: 25px;
     }
   }
   .main-con {
@@ -116,7 +115,6 @@ export default {
     height: 100%;
     overflow: auto;
     > div {
-      padding: 30px;
       width: 100%;
       min-height: 100%;
       &.np {
