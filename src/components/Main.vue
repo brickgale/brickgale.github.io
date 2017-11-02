@@ -117,10 +117,9 @@ export default {
     > div {
       width: 100%;
       min-height: 100%;
+      padding: 30px;
       &.np {
         padding: 0px;
-        max-width: 800px;
-        margin: 0 auto;
       }
     }
     @media (max-width: 768px) {

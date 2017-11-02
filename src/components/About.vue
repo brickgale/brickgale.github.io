@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about np">
     <!-- <h1>About</h1> -->
     <div class="graphic-header-con">
     </div>
