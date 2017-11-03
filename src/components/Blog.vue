@@ -6,11 +6,14 @@
 
 <script>
 export default {
-  name: 'main',
+  name: 'blog',
   data () {
     return {
 
     }
+  },
+  props: {
+    
   },
   methods: {
   
@@ -19,6 +22,7 @@ export default {
 
   },
   mounted() {
+    console.log(this.props)
   },
   components: {
 

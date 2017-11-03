@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import Main from '../components/Main.vue'
 import About from '../components/About.vue'
 import AboutSkills from '../components/About/Skills.vue'
@@ -9,9 +9,9 @@ import Projects from '../components/Projects.vue'
 import Blog from '../components/Blog.vue'
 import NotFound from '../components/NotFound.vue'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   routes: [
   	{
   		path: '/',

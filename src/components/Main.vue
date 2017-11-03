@@ -17,6 +17,9 @@
             </div>
           </div>
         </div>
+        <div class="bottom-con">
+          <component :is="subComponent.name" :props="subComponent.props"></component>
+        </div>
       </div>
       <div class="main-con">
         <router-view></router-view>
@@ -32,6 +35,10 @@ export default {
   name: 'main',
   data () {
     return {
+      subComponent: {
+        name: '',
+        props: {}
+      },
       socialIcons: [
         { 
           link: 'https://github.com/brickgale',
@@ -66,6 +73,10 @@ export default {
     handleClosed() {
       this.$refs.toggler.close()
     },
+    changeSubComponent(name, props) {
+      this.subComponent.name = name
+      this.subComponent.props = props
+    }
   },
   created() {
     this.$parent.$refs.sidebar.$on('sidebar-opened', this.handleOpened)

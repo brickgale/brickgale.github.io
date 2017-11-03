@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'main',
+  name: 'projects',
   data () {
     return {
 
@@ -19,8 +19,6 @@ export default {
 
   },
   mounted() {
-  },
-  components: {
 
   }
 }
