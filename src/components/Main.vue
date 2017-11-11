@@ -142,8 +142,7 @@ export default {
   }
   .top-con {
     padding: 15px;
-    // min-height: 100%;
-    min-height: 250px;
+    height: 200px;
     position: relative;
     @media (max-width: 768px) {
       min-height: auto;
@@ -207,6 +206,10 @@ export default {
     }
     .pair-avatar {
       text-align: center;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 15px;
+      left: 50%;
       &:hover {
         .pair {
           margin-left: -3px;
@@ -214,6 +217,7 @@ export default {
       }
     }
     .name {
+      padding-top: 30px;
       line-height: 3.5em;
     }
     .position {

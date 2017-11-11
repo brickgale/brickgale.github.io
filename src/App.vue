@@ -144,7 +144,7 @@ img {
   li {
     a { 
       color: #a5a5a5;
-      padding: 14px;
+      padding: 13px;
       display: inline-block;
       &.router-link-active {
         color: #00abff;
