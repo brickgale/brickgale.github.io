@@ -81,11 +81,11 @@ export default {
       border-radius: 0 9px 9px 0;
     }
     &:nth-child(odd) {
-      left:0px;
+      left: 0px;
       border-radius: 9px 0 0 9px;
     }
     &:nth-child(1), &:nth-child(2) {
-      top: 0px;
+      top: 1px;
     }
     &:nth-child(3), &:nth-child(4) {
       top: 6px;
