@@ -85,7 +85,7 @@ export default {
       border-radius: 9px 0 0 9px;
     }
     &:nth-child(1), &:nth-child(2) {
-      top: 1px;
+      top: 0px;
     }
     &:nth-child(3), &:nth-child(4) {
       top: 6px;

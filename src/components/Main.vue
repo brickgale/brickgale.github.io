@@ -210,6 +210,9 @@ export default {
       transform: translate(-50%,-50%);
       top: 15px;
       left: 50%;
+      @media (max-width: 768px) {
+        top: 35px;
+      }
       &:hover {
         .pair {
           margin-left: -3px;
