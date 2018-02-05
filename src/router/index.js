@@ -27,12 +27,11 @@ export default new VueRouter({
         },
       	{
       		path: 'about',
-	      	name: 'about',
 	      	component: About,
           children: [
             {
               path: '',
-              name: 'about-profile',
+              name: 'about',
               component: AboutProfile
             },
             {

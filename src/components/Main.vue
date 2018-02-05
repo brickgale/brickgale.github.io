@@ -32,7 +32,7 @@
 import UiBurgerToggler from './common/UiBurgerToggler.vue'
 
 export default {
-  name: 'main',
+  name: 'main-comp',
   data () {
     return {
       subComponent: {

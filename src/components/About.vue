@@ -31,12 +31,12 @@
 import UiMenu from './common/UiMenu.vue'
 
 export default {
-  name: 'main',
+  name: 'about',
   data () {
     return {
       menu: [
         { name: 'Skills', route: 'about-skills' },
-        { name: 'Profile', route: 'about-profile' },
+        { name: 'Profile', route: 'about' },
         { name: 'Misc', route: 'about-misc' }
       ]
     }
@@ -109,7 +109,7 @@ export default {
       height: 100%;
       z-index: 1;
       opacity: 0.9;
-      background: url('/src/assets/bg_codes2.jpeg') no-repeat center;
+      background: url('/src/assets/bg_codes_polygon.png') no-repeat center;
       background-repeat: no-repeat;
       background-position: 50% 0;
       -ms-background-size: cover;
