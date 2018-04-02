@@ -97,10 +97,6 @@ body {
   margin: 0;
 }
 
-#app {
-
-}
-
 [v-cloak] {
     display: none;
 }
@@ -134,6 +130,46 @@ img {
 .hide-on-mobile {
   @media (max-width: 768px) {
     display: none;
+  }
+}
+
+.layered-bg {
+  position: relative;
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0,0,0,0.3);
+    background: linear-gradient(to bottom right,#002f4b,#ffffff);
+    opacity: 0.5;
+  }
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.9;
+    background: url('./assets/bg_setup.png') no-repeat center;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .content {
+    position: relative;
+    z-index: 10;
   }
 }
 

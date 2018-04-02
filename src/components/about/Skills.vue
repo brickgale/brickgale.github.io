@@ -60,6 +60,8 @@ export default {
         { name: 'd3js' },
         { name: 'JQuery' },
         { name: 'Wordpress' },
+        { name: 'Vagrant' },
+        { name: 'Ubuntu' },
         { name: 'GIT' },
         { name: 'SASS' },
         { name: 'HTML' },
@@ -68,6 +70,8 @@ export default {
         { name: 'JS' },
         { name: 'WEBRTC' },
         { name: 'SQL' },
+        { name: 'Photoshop' },
+        { name: 'Illustrator' },
       ]
     }
   },

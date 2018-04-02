@@ -1,7 +1,7 @@
 <template>
   <div class="main wrapper row">
       <div class="side-con">
-        <div class="top-con">
+        <div class="top-con layered-bg">
           <ui-burger-toggler @burger-toggled="handleToogle" ref="toggler"></ui-burger-toggler>
           <div class="profile-con">
             <div class="pair-avatar">
@@ -147,48 +147,28 @@ export default {
   .top-con {
     padding: 15px;
     height: 200px;
-    position: relative;
     @media (max-width: 768px) {
       min-height: auto;
       height: 45px;
     }
-    &:before {
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      background: rgba(0,0,0,0.3);
-      background: linear-gradient(to bottom right,#002f4b,#ffffff);
-      opacity: 0.5;
-    }
-    &:after {
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0.9;
-      background: url('../assets/bg_setup.png') no-repeat center;
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      -ms-background-size: cover;
-      -o-background-size: cover;
-      -moz-background-size: cover;
-      -webkit-background-size: cover;
-      background-size: cover;
+    &.layered-bg {
+      &:before {
+        background: linear-gradient(to bottom right,#002f4b,#ffffff);
+      }
+      &:after {
+        background: url('../assets/bg_setup.png') no-repeat center;
+      }
     }
   }
   .bottom-con {
     height: auto;
     display: flex;
-    padding: 20px;
+    > div {
+      padding: 20px;
+      &.np {
+        padding: 0;
+      }
+    }
     @media (max-width: 768px) {
       display: none;
     }
