@@ -3,7 +3,10 @@
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="box-con">
-
+          <h5>Familiar Tech:</h5>
+          <div class="tags">
+            <span v-for="tech in techs">{{ tech.name }}</span>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-6">
@@ -47,7 +50,25 @@ export default {
             { value: [8, 8, 8, 7, 7, 8] }
           ]
         }]
-      }
+      },
+      techs: [
+        { name: 'Laravel' },
+        { name: 'Vuejs' },
+        { name: 'Angularjs' },
+        { name: 'Reactjs' },
+        { name: 'SkwayJs' },
+        { name: 'd3js' },
+        { name: 'JQuery' },
+        { name: 'Wordpress' },
+        { name: 'GIT' },
+        { name: 'SASS' },
+        { name: 'HTML' },
+        { name: 'CSS' },
+        { name: 'PHP' },
+        { name: 'JS' },
+        { name: 'WEBRTC' },
+        { name: 'SQL' },
+      ]
     }
   },
   methods: {
@@ -81,6 +102,19 @@ export default {
           width: 100%;
           height: 75vw;
         }
+      }
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      span {
+        padding: 2px 10px;
+        border-radius: 14px;
+        background: linear-gradient(to bottom right, #99d6f5, #00abff);
+        color: #fff;
+        margin-right: 5px;
+        margin-bottom: 5px;
       }
     }
   }

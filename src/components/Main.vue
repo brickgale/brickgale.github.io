@@ -30,6 +30,7 @@
 
 <script>
 import UiBurgerToggler from './common/UiBurgerToggler.vue'
+import SponsorMe from './partials/SponsorMe.vue'
 
 export default {
   name: 'main-comp',
@@ -83,10 +84,13 @@ export default {
     this.$parent.$refs.sidebar.$on('sidebar-closed', this.handleClosed)
   },
   mounted() {
-
+    if(!this.subComponent.name) {
+      this.changeSubComponent('sponsor-me')
+    }
   },
   components: {
-    UiBurgerToggler
+    UiBurgerToggler,
+    SponsorMe
   }
 }
 </script>
@@ -179,6 +183,14 @@ export default {
       -moz-background-size: cover;
       -webkit-background-size: cover;
       background-size: cover;
+    }
+  }
+  .bottom-con {
+    height: auto;
+    display: flex;
+    padding: 20px;
+    @media (max-width: 768px) {
+      display: none;
     }
   }
   .profile-con {
