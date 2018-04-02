@@ -1,7 +1,7 @@
 <template>
   <div class="about np">
     <!-- <h1>About</h1> -->
-    <div class="graphic-header-con">
+    <div class="graphic-header-con layered-bg">
     </div>
 
     <div class="wrapper-con">
@@ -84,29 +84,13 @@ export default {
   .graphic-header-con {
     position: relative;
     min-height: 200px;
-    overflow: hidden;
     box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
     &:before {
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      background: rgba(0,0,0,0.3);
       background: linear-gradient(to bottom right,#002f4b,#ffffff);
       opacity: 0.5;
     }
     &:after {
       content: ' ';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
       z-index: 1;
       opacity: 0.9;
       background: url('/src/assets/bg_codes_polygon.png') no-repeat center;

@@ -161,6 +161,7 @@ img {
 
 .layered-bg {
   position: relative;
+  overflow: hidden;
   &:before {
     content: ' ';
     display: block;
@@ -196,6 +197,11 @@ img {
   .content {
     position: relative;
     z-index: 10;
+  }
+  &:hover {
+    &:after {
+      transform: scale(1.2);
+    }
   }
 }
 
