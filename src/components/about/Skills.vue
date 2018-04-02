@@ -12,7 +12,7 @@
       <div class="col-xs-12 col-md-6">
         <div class="box-con">
           <div class="chart-skills ">
-            <chart :options="skillRadar" ref="skills_radar" theme="macarons" auto-resize></chart>
+            <chart :init-options="initOptions" :options="skillRadar" ref="skills_radar" theme="macarons" auto-resize></chart>
           </div>
         </div>
       </div>
@@ -31,6 +31,9 @@ export default {
   name: 'about-skills',
   data () {
     return {
+      initOptions: {
+        renderer: 'svg'
+      },
       skillRadar: {
         tooltip: {},
         radar: {

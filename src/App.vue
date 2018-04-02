@@ -72,6 +72,8 @@ export default {
   font-style: normal;
 }
 
+// Flexboxgrid
+@import '~flexboxgrid/css/flexboxgrid';
 
 *:not(body),
 *::before,
