@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="box-con">
-          <h5>Familiar Tech:</h5>
+          <h4>Familiar Tech:</h4>
           <div class="tags">
             <span v-for="tech in techs">{{ tech.name }}</span>
           </div>

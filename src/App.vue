@@ -135,6 +135,30 @@ img {
   }
 }
 
+.btn {
+    border: 1px solid transparent;
+    user-select: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #00abff;
+    background: linear-gradient(to bottom right, #99d6f5, #00abff);
+    padding: 10px 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+    line-height: 1.4em;
+    max-width: 100%;
+    .fa {
+      margin-right: 8px;
+    }
+}
+
 .layered-bg {
   position: relative;
   &:before {
