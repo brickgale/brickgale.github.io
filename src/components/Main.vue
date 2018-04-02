@@ -17,12 +17,15 @@
             </div>
           </div>
         </div>
-        <div class="bottom-con">
+        <div class="bottom-con hide-on-mobile">
           <component :is="subComponent.name" :props="subComponent.props"></component>
         </div>
       </div>
       <div class="main-con">
         <router-view></router-view>
+      </div>
+      <div class="bottom-con show-on-mobile">
+        <component :is="subComponent.name" :props="subComponent.props"></component>
       </div>
     </div>
   </div>
@@ -142,11 +145,13 @@ export default {
       flex-basis: 100%;
       flex: 0 0 auto;
       height: 100%;
+      min-height: 100vh;
     }
   }
   .top-con {
     padding: 15px;
     height: 200px;
+    overflow: unset;
     @media (max-width: 768px) {
       min-height: auto;
       height: 45px;
@@ -159,18 +164,21 @@ export default {
         background: url('../assets/bg_setup.png') no-repeat center;
       }
     }
+    &:hover {
+      &:after {
+        transform: scale(1);
+      }
+    }
   }
   .bottom-con {
     height: auto;
-    display: flex;
+    width: 100%;
     > div {
+      width: 100%;
       padding: 20px;
       &.np {
         padding: 0;
       }
-    }
-    @media (max-width: 768px) {
-      display: none;
     }
   }
   .profile-con {
@@ -190,6 +198,7 @@ export default {
       // border-radius: 50%;
       // float: left;
       box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
+      z-index: 19;
 
       &.pair {
         z-index: 20;

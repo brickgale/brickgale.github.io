@@ -79,7 +79,7 @@ export default {
   .wrapper-con {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0px 30px;
+    padding: 0px 30px 30px;
   }
   .graphic-header-con {
     position: relative;

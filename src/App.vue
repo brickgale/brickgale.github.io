@@ -135,6 +135,13 @@ img {
   }
 }
 
+.show-on-mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
 .btn {
     border: 1px solid transparent;
     user-select: none;
@@ -156,6 +163,9 @@ img {
     max-width: 100%;
     .fa {
       margin-right: 8px;
+    }
+    &:hover {
+      background: linear-gradient(to bottom right, #00abff, #99d6f5);
     }
 }
 
