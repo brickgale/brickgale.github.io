@@ -151,10 +151,15 @@ export default {
   .top-con {
     padding: 15px;
     height: 200px;
-    overflow: unset;
     @media (max-width: 768px) {
       min-height: auto;
       height: 45px;
+      overflow: unset;
+      &:hover {
+        &:after {
+          transform: scale(1);
+        }
+      }
     }
     &.layered-bg {
       &:before {
@@ -162,11 +167,6 @@ export default {
       }
       &:after {
         background: url('../assets/bg_setup.png') no-repeat center;
-      }
-    }
-    &:hover {
-      &:after {
-        transform: scale(1);
       }
     }
   }

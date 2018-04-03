@@ -135,6 +135,10 @@ img {
   }
 }
 
+.highlight { 
+  color: #00abff;
+}
+
 .show-on-mobile {
   display: none;
   @media (max-width: 768px) {

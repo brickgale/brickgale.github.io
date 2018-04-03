@@ -15,7 +15,7 @@
     </div>
     <div class="paypal-me">
       <h3>Buy me a Cup of Coffee</h3>
-      <p>I'm not a fan of coffee but there's nothing wrong to help a brotha out, right? 🙏</p>
+      <p>Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
       <a href="https://www.paypal.me/brianmonsales/100" class="btn paypal" target="_blank">
         <i class="fa fa-paypal"></i>
         Send some love
