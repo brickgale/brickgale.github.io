@@ -66,8 +66,5 @@ export default new VueRouter({
       path: '*',
       redirect: '/not-found'
     },
-  ],
-  hashbang: false,
-  history: true,
-  mode: 'history'
+  ]
 })
