@@ -58,13 +58,16 @@ export default new VueRouter({
         },
       ]
     },
-	{
-		path: '/not-found',
-		component: NotFound
-	},
-	{
-		path: '*',
-		redirect: '/not-found'
-	},
-  ]
+    {
+      path: '/not-found',
+      component: NotFound
+    },
+    {
+      path: '*',
+      redirect: '/not-found'
+    },
+  ],
+  hashbang: false,
+  history: true,
+  mode: 'history'
 })

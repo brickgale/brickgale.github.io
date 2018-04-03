@@ -11,8 +11,8 @@
           <div class="col-xs-10 col-md-6">
             <div class="g-avatar-con">
               <lightbox
-                thumbnail="./src/assets/me_nck.jpg"
-                :images="['./src/assets/me_nck.jpg']"
+                thumbnail="/src/assets/me_nck.jpg"
+                :images="['/src/assets/me_nck.jpg']"
               ></lightbox>
             </div>
             <div class="g-menu-con">
