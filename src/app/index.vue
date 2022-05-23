@@ -1,6 +1,6 @@
 <script setup lang="ts">
-    import UiMenu from './components/common/uiMenu/index.vue'
-    import UiSidebar from './components/common/uiSidebar/index.vue'
+    import UiMenu from '@/components/common/uiMenu/index.vue'
+    import UiSidebar from '@/components/common/uiSidebar/index.vue'
 
     const menu = [
         { name: 'About', route: 'about' },
@@ -15,7 +15,7 @@
             <template #topCon>
                 <div class="top-con">
                     <div class="logo-con">
-                        <img class="avatar" src="./assets/monogram_white.png">
+                        <img class="avatar" src="../assets/monogram_white.png">
                     </div>
                 </div>
             </template>
@@ -31,13 +31,4 @@
     </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./index.scss" />
