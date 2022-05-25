@@ -23,13 +23,14 @@
     }
 
     const open = () => {
-        el.classList.add('open')
+    console.log(el)
+        el.value.classList.add('open')
         _opened.value = true
         emit('burger-opened')
     }
 
     const close = () => {
-        el.classList.remove('open')
+        el.value.classList.remove('open')
         _opened.value = false
         emit('burger-closed')
     }
@@ -41,3 +42,5 @@
         <span></span><span></span><span></span>
     </div>
 </template>
+
+<style lang="scss" src="./index.scss" />
