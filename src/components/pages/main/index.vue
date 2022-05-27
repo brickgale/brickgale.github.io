@@ -17,8 +17,7 @@
     onMounted(() => {
         const visible = toRef(sidebar.value, '_visible')
         watch(visible, (to) => {
-            console.log('changed _Visible value')
-            if(!to) toggler.value.close()
+            if(!to) toggler.value?.close()
         })
     })
 </script>
