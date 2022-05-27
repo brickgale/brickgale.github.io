@@ -10,7 +10,7 @@
     
     const emit = defineEmits([ 'burger-toggled', 'burger-opened', 'burger-closed' ])
 
-    const el = ref(null)
+    const el = ref<HTMLDivElement | null>(null)
     const _opened = ref(false)
     onMounted(() => _opened.value = props.opened)
     const toggle = () => {
@@ -23,14 +23,13 @@
     }
 
     const open = () => {
-    console.log(el)
-        el.value.classList.add('open')
+        el.value?.classList.add('open')
         _opened.value = true
         emit('burger-opened')
     }
 
     const close = () => {
-        el.value.classList.remove('open')
+        el?.value?.classList.remove('open')
         _opened.value = false
         emit('burger-closed')
     }

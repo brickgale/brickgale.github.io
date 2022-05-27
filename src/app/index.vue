@@ -1,6 +1,13 @@
 <script setup lang="ts">
+    import { ref, provide } from 'vue'
     import UiMenu from '@/components/common/uiMenu/index.vue'
     import UiSidebar from '@/components/common/uiSidebar/index.vue'
+
+    const sidebar = ref<HTMLDivElement | null>(null)
+    const adjContainer = ref<HTMLDivElement | null>(null)
+
+    provide('sidebar', sidebar)
+    provide('adjContainer', adjContainer)
 
     const menu = [
         { name: 'About', route: 'about' },
@@ -24,7 +31,7 @@
             </div>
         </template>
     </UiSidebar>
-    <div class="main-container" ref="adj_container">
+    <div class="main-container" ref="adjContainer">
         <router-view />
     </div>
 </template>
