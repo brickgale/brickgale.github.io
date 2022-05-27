@@ -3,22 +3,24 @@
     import UiBurgerToggler from '@/components/common/uiBurgerToggler/index.vue'
     import SponsorMe from '@/components/partials/sponsorMe/index.vue'
 
-    const toggler = ref(null)
-    const sidebar = inject<typeof ref | null>('sidebar')
-
-    const opened = () => {
-        sidebar.value.open()
+    interface UiSidebarType {
+        open: Function;
+        close: Function;
+        _visible: Boolean;
     }
 
-    const closed = () => {
-        sidebar.value.close()
-    }
+    const toggler = ref<any>(null)
+    const sidebar = unref( inject<UiSidebarType | null>('sidebar') )
+    const opened = () => sidebar?.open()
+    const closed = () => sidebar?.close()
 
     onMounted(() => {
-        const visible = toRef(sidebar.value, '_visible')
-        watch(visible, (to) => {
-            if(!to) toggler.value?.close()
-        })
+        if(sidebar) {
+            const visible = toRef(sidebar, '_visible')
+            watch(visible, (to) => {
+                if(!to) toggler.value?.close()
+            })
+        }
     })
 </script>
 
