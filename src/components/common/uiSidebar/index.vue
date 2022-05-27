@@ -3,7 +3,7 @@
     import UiBackDrop from '@/components/common/uiBackDrop/index.vue'
 
     const el = ref<HTMLDivElement | null>(null)
-    const emit = defineEmits(['sidebar-toggled'])
+    const emit = defineEmits(['sidebar-opened', 'sidebar-closed'])
 
     const props = defineProps({
         visible: {
@@ -26,20 +26,15 @@
     function open() {
         _visible.value = true
         el.value?.classList.add('opened')
+        if(props.mMode) el.value?.classList.add('m-mode')
+        emit('sidebar-opened')
     }
 
     function close() {
         _visible.value = false
         el.value?.classList.remove('opened')
-    }
-
-    function toggle() {
-        if(unref(_visible)) {
-            close()
-        } else {
-            open()
-        }
-        emit('sidebar-toggled')
+        if(props.mMode) el.value?.classList.remove('m-mode')
+        emit('sidebar-closed')
     }
 
     function handleResize() {
@@ -60,7 +55,8 @@
     })
 
     defineExpose({
-        open, close
+        open, close,
+        _visible
     })
 
 </script>

@@ -7,7 +7,14 @@
     const adjContainer = ref<HTMLDivElement | null>(null)
 
     provide('sidebar', sidebar)
-    provide('adjContainer', adjContainer)
+
+    const opened = () => {
+        adjContainer.value?.classList.add('openedSidebar')
+        adjContainer.value?.classList.add('left')
+    }
+    const closed = () => {
+        adjContainer.value?.classList.remove('openedSidebar')
+    }
 
     const menu = [
         { name: 'About', route: 'about' },
@@ -17,7 +24,8 @@
 </script>
 
 <template>
-    <UiSidebar class="main-sidebar" :visible="false" ref="sidebar" :m-mode="true">
+    <UiSidebar class="main-sidebar" :visible="false" ref="sidebar" :m-mode="true"
+        @sidebar-opened="opened" @sidebar-closed="closed">
         <template #topCon>
             <div class="top-con">
                 <div class="logo-con">

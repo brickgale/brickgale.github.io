@@ -33,6 +33,11 @@
         _opened.value = false
         emit('burger-closed')
     }
+
+    defineExpose({
+        close
+    })
+
 </script>
 
 <template>

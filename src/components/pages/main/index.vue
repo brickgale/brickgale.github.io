@@ -1,23 +1,26 @@
 <script setup lang="ts">
-    import { ref, inject, unref } from 'vue'
+    import { ref, inject, unref, watch, onMounted, toRef } from 'vue'
     import UiBurgerToggler from '@/components/common/uiBurgerToggler/index.vue'
     import SponsorMe from '@/components/partials/sponsorMe/index.vue'
 
     const toggler = ref(null)
     const sidebar = inject<typeof ref | null>('sidebar')
-    const adjContainer = inject<typeof ref | null>('adjContainer')
 
     const opened = () => {
         sidebar.value.open()
-        adjContainer.value.classList.add('openedSidebar')
-        adjContainer.value.classList.add('left')
     }
 
     const closed = () => {
-        // toggle logic 
         sidebar.value.close()
-        adjContainer.value.classList.remove('openedSidebar')
     }
+
+    onMounted(() => {
+        const visible = toRef(sidebar.value, '_visible')
+        watch(visible, (to) => {
+            console.log('changed _Visible value')
+            if(!to) toggler.value.close()
+        })
+    })
 </script>
 
 <template>
