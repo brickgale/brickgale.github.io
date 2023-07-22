@@ -10,12 +10,10 @@
 
 <template>
     <div class="about np">
-        <!-- <h1>About</h1> -->
         <div class="graphic-header-con layered-bg">
         </div>
 
         <div class="wrapper-con">
-
             <div class="g-content">
                 <div class="row center-xs">
                     <div class="col-xs-10 col-md-6">
