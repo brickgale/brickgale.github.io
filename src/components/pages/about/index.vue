@@ -40,12 +40,14 @@
         { name: 'Misc', route: 'about-misc' }
     ]
 
+    const profilePicSrc = new URL('/images/me_nck.jpg', import.meta.url).href
+
     const {
         show, onHide,
         visibleRef, indexRef, imgsRef
     } = useEasyLightbox({
         imgs: [
-            '/src/assets/me_nck.jpg',
+            profilePicSrc,
         ],
         initIndex: 0
     })

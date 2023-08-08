@@ -1,5 +1,5 @@
 <template>
     <div class="main wrapper row">
-        Hello Im here
+        <h1>Blog</h1>
     </div>
 </template>
