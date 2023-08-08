@@ -1,0 +1,32 @@
+.about-profile {
+    padding-top: 20px;
+    .box-con {
+        padding: 20px;
+        margin-bottom: 20px;
+        h3 {
+            font-family: 'CircularStdBold';
+            font-size: 16px;
+            padding-bottom: 20px;
+            i {
+            margin-right: 8px;
+            }
+        }
+        .timeline {
+            .content {
+                p {
+                    margin: 0;
+                    line-height: 1.6em;
+                    white-space: pre-wrap;
+                    &.main {
+                        font-family: 'CircularStdBold';
+                    
+                    }
+                    &.sub {
+                        color: #adadad;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
