@@ -1,25 +1,3 @@
-<script setup lang="ts">
-    import UiMenu from '@/components/common/uiMenu/index.vue'
-    import VueEasyLightbox, { useEasyLightbox } from 'vue-easy-lightbox'
-
-    const menu = [
-        { name: 'Skills', route: 'about-skills' },
-        { name: 'Profile', route: 'about' },
-        { name: 'Misc', route: 'about-misc' }
-    ]
-
-    const {
-      show, onHide,
-      visibleRef, indexRef, imgsRef
-    } = useEasyLightbox({
-      imgs: [
-        '/src/assets/me_nck.jpg',
-      ],
-      initIndex: 0
-    })
-    
-</script>
-
 <template>
     <div class="about np">
         <div class="graphic-header-con layered-bg">
@@ -51,5 +29,27 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+    import UiMenu from '@/components/common/uiMenu/index.vue'
+    import VueEasyLightbox, { useEasyLightbox } from 'vue-easy-lightbox'
+
+    const menu = [
+        { name: 'Skills', route: 'about-skills' },
+        { name: 'Profile', route: 'about' },
+        { name: 'Misc', route: 'about-misc' }
+    ]
+
+    const {
+      show, onHide,
+      visibleRef, indexRef, imgsRef
+    } = useEasyLightbox({
+      imgs: [
+        '/src/assets/me_nck.jpg',
+      ],
+      initIndex: 0
+    })
+    
+</script>
 
 <style lang="scss" src="./index.scss" />
