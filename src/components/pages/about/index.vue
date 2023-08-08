@@ -41,13 +41,13 @@
     ]
 
     const {
-      show, onHide,
-      visibleRef, indexRef, imgsRef
+        show, onHide,
+        visibleRef, indexRef, imgsRef
     } = useEasyLightbox({
-      imgs: [
-        '/src/assets/me_nck.jpg',
-      ],
-      initIndex: 0
+        imgs: [
+            '/src/assets/me_nck.jpg',
+        ],
+        initIndex: 0
     })
     
 </script>

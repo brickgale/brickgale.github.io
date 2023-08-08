@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import { PropType } from 'vue';
+
+    interface Menu {
+        route: string,
+        name: string
+    }
     const props = defineProps({
-        menu: { 
-            type: Array,
-            default: () => {
-                return []
-            }
-        }
+        menu: Array as PropType<Array<Menu>>,
     })
 </script>
 
