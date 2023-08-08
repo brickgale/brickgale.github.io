@@ -1,0 +1,74 @@
+<template>
+    <div class="about-skills np">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="box-con">
+                <h4>Familiar Tech:</h4>
+                <div class="tags">
+                    <span v-for="tech in techs">{{ tech }}</span>
+                </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="box-con">
+                    <div class="chart-skills">
+                        <v-chart :option="options" auto-resize />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+    import { use } from "echarts/core";
+    import { CanvasRenderer } from "echarts/renderers";
+    import { RadarChart } from "echarts/charts";
+    import {
+        PolarComponent,
+        TitleComponent,
+        TooltipComponent
+    } from "echarts/components";
+    import VChart, { THEME_KEY } from "vue-echarts";
+    import { ref, provide } from "vue";
+
+    provide(THEME_KEY, "light");
+
+    const techs = [
+        'Laravel', 'Vuejs', 'Angularjs', 'Reactjs', 'SkwayJs', 'd3js', 'JQuery', 
+        'Wordpress', 'Vagrant', 'Ubuntu', 'GIT', 'SASS', 'HTML', 'CSS', 'PHP', 
+        'JS', 'WEBRTC', 'SQL', 'Photoshop', 'Illustrator',
+    ]
+
+    use([
+        CanvasRenderer,
+        RadarChart,
+        PolarComponent,
+        TitleComponent,
+        TooltipComponent
+    ]);
+
+    const options = ref({
+        tooltip: {},
+        radar: {
+            indicator: [
+                { name: 'PHP', max: 10 },
+                { name: 'JS', max: 10 },
+                { name: 'CSS', max: 10 },
+                { name: 'NODEJS', max: 10 },
+                { name: 'SQL', max: 10 },
+                { name: 'HTML', max: 10 },
+            ]
+        },
+        series: [{
+            name: 'Skills',
+            type: 'radar',
+            data: [
+                { value: [8, 8, 8, 7, 7, 8] }
+            ]
+        }]
+    })
+
+</script>
+
+<style lang="scss" src="./index.scss" />
