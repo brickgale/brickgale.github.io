@@ -5,7 +5,7 @@
                 <div class="box-con">
                     <h3><i class="fa fa-graduation-cap"></i>Eduation</h3>
                     <ul class="timeline">
-                        <li v-for="sy in education.reverse()">
+                        <li v-for="sy in education">
                             <span></span>
                             <div class="content">
                                 <p class="main">
@@ -25,7 +25,7 @@
                 <div class="box-con">
                     <h3><i class="fa fa-briefcase"></i>Work History</h3>
                     <ul class="timeline">
-                        <li v-for="job in work_history.reverse()">
+                        <li v-for="job in work_history">
                             <span></span>
                             <div class="content">
                                 <p class="main">
@@ -112,6 +112,10 @@
             position: 'Frontend Web Developer'
         },
     ]
+
+    //somehow if put on v-for it will reset on switching pages
+    work_history.reverse()
+    education.reverse()
 
 </script>
 
