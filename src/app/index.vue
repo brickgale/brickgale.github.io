@@ -2,6 +2,7 @@
     import { ref, provide } from 'vue'
     import UiMenu from '@/components/common/uiMenu/index.vue'
     import UiSidebar from '@/components/common/uiSidebar/index.vue'
+    import 'overlayscrollbars/overlayscrollbars.css'
 
     const sidebar = ref<HTMLDivElement | null>(null)
     const adjContainer = ref<HTMLDivElement | null>(null)

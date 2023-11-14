@@ -21,9 +21,20 @@
                 <SponsorMe />
             </div>
         </div>
-        <div class="main-con">
-            <router-view></router-view>
-        </div>
+        <!-- <div class="main-con"> -->
+            <OverlayScrollbarsComponent
+                element="span"
+                class="main-con"
+                :options="{
+                    scrollbars: {
+                        theme: 'os-theme-dark',
+                    },
+                }"
+                defer
+            >
+                <router-view></router-view>
+            </OverlayScrollbarsComponent>
+        <!-- </div> -->
         <div class="bottom-con show-on-mobile">
             <SponsorMe />
         </div>
@@ -34,6 +45,7 @@
     import { ref, inject, unref, watch, onMounted, toRef } from 'vue'
     import UiBurgerToggler from '@/components/common/uiBurgerToggler/index.vue'
     import SponsorMe from '@/components/partials/sponsorMe/index.vue'
+    import { OverlayScrollbarsComponent } from "overlayscrollbars-vue"
 
     interface UiSidebarType {
         open: Function;
