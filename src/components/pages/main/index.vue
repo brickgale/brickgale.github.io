@@ -17,24 +17,25 @@
                     </div>
                 </div>
             </div>
+            <div class="mid-con">
+                
+            </div>
             <div class="bottom-con hide-on-mobile">
                 <SponsorMe />
             </div>
         </div>
-        <!-- <div class="main-con"> -->
-            <OverlayScrollbarsComponent
-                element="span"
-                class="main-con"
-                :options="{
-                    scrollbars: {
-                        theme: 'os-theme-dark',
-                    },
-                }"
-                defer
-            >
-                <router-view></router-view>
-            </OverlayScrollbarsComponent>
-        <!-- </div> -->
+        <OverlayScrollbarsComponent
+            element="span"
+            class="main-con"
+            :options="{
+                scrollbars: {
+                    theme: 'os-theme-dark',
+                },
+            }"
+            defer
+        >
+            <router-view></router-view>
+        </OverlayScrollbarsComponent>
         <div class="bottom-con show-on-mobile">
             <SponsorMe />
         </div>
