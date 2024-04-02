@@ -69,12 +69,12 @@
           class: 'fa fa-facebook'
         },
         { 
-          link: 'https://www.linkedin.com/in/brianmonsales',
-          class: 'fa fa-linkedin'
+          link: 'https://www.instagram.com/borntobeatroll',
+          class: 'fa fa-instagram'
         },
         { 
-          link: 'https://www.behance.net/brickgale',
-          class: 'fa fa-behance'
+          link: 'https://www.linkedin.com/in/brianmonsales',
+          class: 'fa fa-linkedin'
         },
         { 
           link: 'https://dribbble.com/brickgale',
