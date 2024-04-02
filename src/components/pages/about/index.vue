@@ -8,8 +8,8 @@
                 <div class="row center-xs">
                     <div class="col-xs-10 col-md-6">
                         <div class="g-avatar-con">
-                            <template v-for="img in imgsRef">
-                                <img :src="img" @click="show" />
+                            <template v-for="(src, index) in imgsRef" :key="index">
+                                <img :src="src" @click="show" />
                             </template>
                             <vue-easy-lightbox
                                 :visible="visibleRef"
