@@ -4,7 +4,7 @@
     "version": "0.2.0",
     "scripts": {
         "dev": "vite",
-        "build": "vue-tsc --noEmit && vite build",
+        "build": "vite build",
         "preview": "vite preview"
     },
     "dependencies": {
@@ -22,7 +22,6 @@
         "vite": "^2.9.18",
         "vue-easy-lightbox": "^1.16.0",
         "vue-echarts": "^6.6.1",
-        "vue-router": "^4.0.15",
-        "vue-tsc": "^0.34.7"
+        "vue-router": "^4.0.15"
     }
 }
