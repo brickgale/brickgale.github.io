@@ -35,9 +35,12 @@
     provide(THEME_KEY, "light");
 
     const techs = [
-        'Laravel', 'Vuejs', 'Angularjs', 'Reactjs', 'SkwayJs', 'd3js', 'JQuery', 
-        'Wordpress', 'Vagrant', 'Ubuntu', 'GIT', 'SASS', 'HTML', 'CSS', 'PHP', 
-        'JS', 'WEBRTC', 'SQL', 'Photoshop', 'Illustrator',
+        'Laravel', 'Vuejs', 'Angularjs', 'Reactjs', 'Tailwind', 'Typescript',
+        'Vite', 'Webpack', 'Docker', 'Gridsome', 'SkwayJs', 'd3js', 'Nodejs', 
+        'AWS', 'MongoDB', 'Shopify', 'Magento', 'Heroku', 'Gulp',
+        'jQuery', 'Wordpress', 'Vagrant', 'GIT', 'SCSS', 'HTML', 'CSS', 'PHP', 
+        'JS', 'WebRTC', 'SQL', 'Adobe Premier', 'Adobe Photoshop', 'Adobe Illustrator',
+        'Shell Scripting',
     ]
 
     use([

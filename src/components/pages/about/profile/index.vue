@@ -3,26 +3,6 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="box-con">
-                    <h3><i class="fa fa-graduation-cap"></i>Eduation</h3>
-                    <ul class="timeline">
-                        <li v-for="sy in education">
-                            <span></span>
-                            <div class="content">
-                                <p class="main">
-                                    {{ sy.title }}
-                                </p>
-                                <p class="sub">{{ sy.address }}</p>
-                            </div>
-                            <span class="timestamp">
-                                <span>{{ sy.to }}</span>
-                                <span>{{ sy.from }}</span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <div class="box-con">
                     <h3><i class="fa fa-briefcase"></i>Work History</h3>
                     <ul class="timeline">
                         <li v-for="job in work_history">
@@ -36,6 +16,26 @@
                             <span class="timestamp">
                                 <span>{{ job.to }}</span>
                                 <span>{{ job.from }}</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="box-con">
+                    <h3><i class="fa fa-graduation-cap"></i>Eduation</h3>
+                    <ul class="timeline">
+                        <li v-for="sy in education">
+                            <span></span>
+                            <div class="content">
+                                <p class="main">
+                                    {{ sy.title }}
+                                </p>
+                                <p class="sub">{{ sy.address }}</p>
+                            </div>
+                            <span class="timestamp">
+                                <span>{{ sy.to }}</span>
+                                <span>{{ sy.from }}</span>
                             </span>
                         </li>
                     </ul>
@@ -107,8 +107,8 @@
         },
         {
             from: 'Aug 2018',
-            to: 'Now',
-            title: 'Optimail Co Ltd',
+            to: 'Dec 2024',
+            title: 'Moebius Co Ltd',
             position: 'Frontend Web Developer'
         },
     ]
