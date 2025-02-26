@@ -40,7 +40,7 @@
         { name: 'Misc', route: 'about-misc' }
     ]
 
-    const profilePicSrc = new URL('/images/me_nck.jpg', import.meta.url).href
+    const profilePicSrc = new URL('/images/updated_prof_pic.jpg', import.meta.url).href
 
     const {
         show, onHide,

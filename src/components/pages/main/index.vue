@@ -6,7 +6,7 @@
                 <div class="profile-con">
                     <div class="pair-avatar">
                         <img class="avatar" src="@/assets/monogram.png">
-                        <img class="avatar pair" src="@/assets/me_avatar.jpg">
+                        <img class="avatar pair" src="@/assets/updated_prof_pic.jpg">
                     </div>
                         <div class="name hide-on-mobile">Brian Monsales</div>
                         <div class="position hide-on-mobile">Fullstack Web Engineer</div>

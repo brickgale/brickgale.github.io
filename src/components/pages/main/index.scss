@@ -57,6 +57,7 @@
             min-height: auto;
             height: 45px;
             overflow: unset;
+            z-index: auto;
             &:hover {
                 &:after {
                     transform: scale(1);

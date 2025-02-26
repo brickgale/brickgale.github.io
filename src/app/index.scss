@@ -35,11 +35,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    transition: all .4s cubic-bezier(.25,.8,.25,1);
 }
 
 html {
     font-size: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -132,7 +132,7 @@ img {
 .layered-bg {
     position: relative;
     overflow: hidden;
-    z-index: auto;
+    z-index: 0;
     &:before {
         content: ' ';
         display: block;
@@ -171,6 +171,7 @@ img {
     }
     &:hover {
         &:after {
+            transition: all .4s cubic-bezier(.25,.8,.25,1);
             transform: scale(1.2);
         }
     }
@@ -223,7 +224,10 @@ img {
         &.row {
             margin: 0;
             > div[class*="col-"] {
-            padding: 0;
+                padding: 0;
+            }
+            .padded {
+                padding: 20px;
             }
         }
     }
