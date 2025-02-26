@@ -5,8 +5,8 @@
                 <UiBurgerToggler @burger-opened="opened" @burger-closed="closed" ref="toggler" />
                 <div class="profile-con">
                     <div class="pair-avatar">
-                        <img class="avatar" src="@/assets/monogram.png">
-                        <img class="avatar pair" src="@/assets/updated_prof_pic.jpg">
+                        <img class="avatar wst" src="@/assets/monogram.png">
+                        <img class="avatar pair wst" src="@/assets/me_avatar.jpg">
                     </div>
                         <div class="name hide-on-mobile">Brian Monsales</div>
                         <div class="position hide-on-mobile">Fullstack Web Engineer</div>
