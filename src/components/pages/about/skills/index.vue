@@ -57,19 +57,19 @@
         color: ['#8e84d8'],
         radar: {
             indicator: [
-                { name: 'PHP', max: 10 },
                 { name: 'JS', max: 10 },
+                { name: 'HTML', max: 10 },
                 { name: 'CSS', max: 10 },
                 { name: 'NODEJS', max: 10 },
                 { name: 'SQL', max: 10 },
-                { name: 'HTML', max: 10 },
+                { name: 'PHP', max: 10 },
             ],
         },
         series: [{
             name: 'Skills',
             type: 'radar',
             data: [
-                { value: [8, 8, 8, 7, 7, 8] }
+                { value: [9, 10, 10, 7, 8, 8 ] }
             ]
         }]
     })

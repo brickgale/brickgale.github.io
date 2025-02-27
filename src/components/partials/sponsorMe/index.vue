@@ -7,16 +7,18 @@
             </div>
         </div>
         <div class="paypal-me">
-            <h3>Buy me a Cup of Coffee</h3>
-            <p>Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
-            <a href="https://www.paypal.me/brianmonsales/100" class="btn paypal" target="_blank">
-                <i class="fa fa-paypal"></i>
-                Send some love
-            </a>
+            <div class="content">
+                <h3>Buy me a Cup of Coffee</h3>
+                <p>Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
+                <a href="https://www.paypal.me/brianmonsales/100" class="btn paypal" target="_blank">
+                    <i class="fa fa-paypal"></i>
+                    Send some love
+                </a>
+            </div>
         </div>
         <div class="contact-con layered-bg">
             <div class="content">
-                <h3 class="title">Contact Me</h3>
+                <h3>Contact Me</h3>
                 <p>Do you want a stunning website for your existing business? 
                 <a href="mailto:brianmonsales@gmail.com" target="_top">Email me! </a> 🔥</p>
             </div>
@@ -26,10 +28,10 @@
 
 <style lang="scss">
 .sponsor-me {
-    .contact-con, .addtional-info {
+    .contact-con, .addtional-info, .paypal-me {
         &.layered-bg {
             &:before {
-                background: linear-gradient(to bottom right, #8e84d8, #99d6f5);
+                background: linear-gradient(to bottom right, #8e84d8, #5f45a3);
             }
             &:after {
                 background: url('@/assets/me_avatar.jpg') no-repeat center;
@@ -39,6 +41,9 @@
         .content {
             color: #fff;
             padding: 20px;
+            > h3 {
+                font-family: 'CircularStdBold';
+            }
             a {
                 color: #fff;
             }
@@ -46,7 +51,9 @@
     }
     .paypal-me {
         background: linear-gradient(to bottom right, #ffffff, #aae2ff);
-        padding: 20px;
+        .content {
+            color: #3e3f43;
+        }
         p {
             margin: 0;
             padding: 10px 0;

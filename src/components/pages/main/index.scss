@@ -70,7 +70,7 @@
         }
         &.layered-bg {
             &:before {
-                background: linear-gradient(to bottom right,#002f4b,#ffffff);
+                background: linear-gradient(to bottom right,#8e84d8, #5f45a3);
             }
             &:after {
                 background: url('@/assets/bg_setup.png') no-repeat center;
