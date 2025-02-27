@@ -29,7 +29,7 @@
     .contact-con, .addtional-info {
         &.layered-bg {
             &:before {
-                background: linear-gradient(to bottom right, #00abff, #99d6f5);
+                background: linear-gradient(to bottom right, #8e84d8, #99d6f5);
             }
             &:after {
                 background: url('@/assets/me_avatar.jpg') no-repeat center;

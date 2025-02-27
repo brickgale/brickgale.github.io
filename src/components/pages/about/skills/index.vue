@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="box-con">
-                <h4>Familiar Tech:</h4>
+                <h3><i class="fa fa-laptop"></i>Familiar Tech</h3>
                 <div class="tags">
                     <span v-for="tech in techs">{{ tech }}</span>
                 </div>
@@ -11,6 +11,7 @@
             </div>
             <div class="col-xs-12 col-md-6">
                 <div class="box-con">
+                    <h3><i class="fa fa-code"></i>Main Skill Chart</h3>
                     <div class="chart-skills">
                         <v-chart :option="options" auto-resize />
                     </div>
@@ -53,6 +54,7 @@
 
     const options = ref({
         tooltip: {},
+        color: ['#8e84d8'],
         radar: {
             indicator: [
                 { name: 'PHP', max: 10 },
@@ -61,7 +63,7 @@
                 { name: 'NODEJS', max: 10 },
                 { name: 'SQL', max: 10 },
                 { name: 'HTML', max: 10 },
-            ]
+            ],
         },
         series: [{
             name: 'Skills',
