@@ -50,6 +50,7 @@
     }
     .g-content {
         margin-top: -80px;
+        margin-bottom: 18px;
         position: relative;
         z-index: 30;
         .g-avatar-con {
@@ -92,5 +93,9 @@
                 }
             }
         }
+    }
+    .box-con {
+        padding: 20px;
+        margin-bottom: 20px;
     }
 }

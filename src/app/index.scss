@@ -106,6 +106,15 @@ img {
     }
 }
 
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+    > div[class*="col-"] { 
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
 .btn {
     border: 1px solid transparent;
     user-select: none;
@@ -250,12 +259,26 @@ img {
         box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.20);
         position: relative;
         overflow: hidden;
-        h3 {
+        h3, h4 {
             font-family: 'CircularStdBold';
             font-size: 16px;
             padding-bottom: 20px;
             i {
-            margin-right: 8px;
+                margin-right: 8px;
+            }
+        }
+        h4 {
+            font-size: 13px;
+            padding-bottom: 8px;
+        }
+        ul.normal-list {
+            margin-bottom: 15px;
+            list-style-type: circle;
+            padding-left: 6px;
+            li {
+                margin-left: 10px;
+                margin-bottom: 5px;
+                display: list-item;
             }
         }
     }

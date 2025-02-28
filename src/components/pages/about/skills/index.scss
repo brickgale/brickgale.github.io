@@ -1,9 +1,4 @@
 .about-skills {
-    padding-top: 20px;
-    .box-con {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
     .chart-skills {
         width: 100%;
         height: 360px;
@@ -15,6 +10,9 @@
                 height: 75vw;
             }
         }
+    }
+    .tech-stack {
+        padding: 0 20px;
     }
     .tags {
         display: flex;

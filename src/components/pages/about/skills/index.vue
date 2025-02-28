@@ -3,10 +3,36 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <div class="box-con">
-                <h3><i class="fa fa-laptop"></i>Familiar Tech</h3>
-                <div class="tags">
-                    <span v-for="tech in techs">{{ tech }}</span>
+                    <h3><i class="fa fa-code-fork"></i>Familiar Tech Stack (Web)</h3>
+                    <div class="content tech-stack">
+                        <h4>For Web Apps:</h4>
+                        <ul class="normal-list">
+                            <li>
+                                LAMP / LEMP <br>- Linux, Apache / Nginx, Mysql, PHP
+                            </li>
+                            <li>
+                                MERN / MEVN <br>- MogoDB, ExpressJS, React / Vue, NodeJS
+                            </li>
+                        </ul>
+                        <h4>For Landing Pages:</h4>
+                        <ul class="normal-list">
+                            <li>
+                                Wordpress
+                            </li>
+                            <li>
+                                VuePress / VitePress
+                            </li>
+                            <li>
+                                Gridsome
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="box-con">
+                    <h3><i class="fa fa-laptop"></i>Familiar Tech</h3>
+                    <div class="tags">
+                        <span v-for="tech in techs">{{ tech }}</span>
+                    </div>
                 </div>
             </div>
             <div class="col-xs-12 col-md-6">
