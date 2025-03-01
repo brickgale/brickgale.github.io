@@ -11,7 +11,7 @@
                                 LAMP / LEMP <br>- Linux, Apache / Nginx, Mysql, PHP
                             </li>
                             <li>
-                                MERN / MEVN <br>- MogoDB, ExpressJS, React / Vue, NodeJS
+                                MERN / MEVN <br>- MogoDB, Express, React / Vue, NodeJS
                             </li>
                         </ul>
                         <h4>For Landing Pages:</h4>
