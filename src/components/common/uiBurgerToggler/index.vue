@@ -5,6 +5,10 @@
         opened: { 
             type: Boolean,
             default: false
+        },
+        isWhite: {
+            type: Boolean,
+            default: true
         }
     })
     
@@ -41,7 +45,7 @@
 </script>
 
 <template>
-    <div class="ui-burger-toggler white" ref="el" @click="toggle">
+    <div :class="['ui-burger-toggler', {'white': isWhite}]" ref="el" @click="toggle">
         <span></span><span></span><span></span>
         <span></span><span></span><span></span>
     </div>

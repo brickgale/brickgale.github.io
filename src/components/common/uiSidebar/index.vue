@@ -69,6 +69,7 @@
     >
         <div class="ui-sidebar-content">
             <slot name="topCon"></slot>
+            <slot name="midCon"></slot>
             <slot name="bottomCon"></slot>
         </div>
         <UiBackDrop class="ui-sidebar-backdrop" @close="close" />

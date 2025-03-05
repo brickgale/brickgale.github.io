@@ -2,6 +2,8 @@
     import { ref, provide } from 'vue'
     import UiMenu from '@/components/common/uiMenu/index.vue'
     import UiSidebar from '@/components/common/uiSidebar/index.vue'
+    import ProfileCon from '@/components/partials/profileCon/index.vue'
+    import SponsorMe from '@/components/partials/sponsorMe/index.vue'
     import 'overlayscrollbars/overlayscrollbars.css'
 
     const sidebar = ref<HTMLDivElement | null>(null)
@@ -28,15 +30,21 @@
     <UiSidebar class="main-sidebar" :visible="false" ref="sidebar" :m-mode="true"
         @sidebar-opened="opened" @sidebar-closed="closed">
         <template #topCon>
-            <div class="top-con">
+            <div class="top-con layered-bg">
                 <div class="logo-con">
                     <img class="avatar" src="@/assets/monogram_white.png">
                 </div>
+                <ProfileCon />
+            </div>
+        </template>
+        <template #midCon>
+            <div class="mid-con">
+                <UiMenu class="main-header" :menu="menu" />
             </div>
         </template>
         <template #bottomCon>
             <div class="buttom-con">
-                <UiMenu class="main-header" :menu="menu" />
+                <SponsorMe />
             </div>
         </template>
     </UiSidebar>

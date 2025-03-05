@@ -1,4 +1,8 @@
 .main {
+    .toggler-con {
+        position: absolute;
+        padding: 15px;
+    }
     &.row {
         flex-wrap: nowrap;
         align-items: flex-start;
@@ -52,101 +56,6 @@
             flex: 0 0 auto;
             height: 100%;
             min-height: 100vh;
-        }
-    }
-    .top-con {
-        padding: 15px;
-        height: 200px;
-        @media (max-width: 768px) {
-            min-height: auto;
-            height: 45px;
-            overflow: unset;
-            z-index: auto;
-            &:hover {
-                &:after {
-                    transform: scale(1);
-                }
-            }
-        }
-        &.layered-bg {
-            &:before {
-                background: linear-gradient(to bottom right,#8e84d8, #5f45a3);
-            }
-            &:after {
-                background: url('@/assets/bg_setup.png') no-repeat center;
-            }
-        }
-    }
-    .bottom-con {
-        height: auto;
-        width: 100%;
-        > div {
-            width: 100%;
-            padding: 20px;
-            &.np {
-                padding: 0;
-            }
-        }
-    }
-    .profile-con {
-        padding: 10px 0px;
-        z-index: 10;
-        position: relative;
-        color: #fff;
-        font-size: 13px;
-        letter-spacing: 1px;
-        text-align: center;
-        @media (max-width: 768px) {
-            margin-top: -25px;
-        }
-        img.avatar {
-            width: 50px;
-            height: 50px;
-            // border-radius: 50%;
-            // float: left;
-            box-shadow: 0px 3px 17px -6px rgba(0, 0, 0, 0.61);
-            z-index: 19;
-
-            &.pair {
-                z-index: 20;
-                margin-left: -20px;
-            }
-        }
-        .pair-avatar {
-            text-align: center;
-            position: absolute;
-            transform: translate(-50%,-50%);
-            top: 15px;
-            left: 50%;
-            @media (max-width: 768px) {
-                top: 35px;
-            }
-            &:hover {
-                .pair {
-                    margin-left: -3px;
-                }
-            }
-        }
-        .name {
-            padding-top: 30px;
-            line-height: 3.5em;
-        }
-        .position {
-            text-transform: uppercase;
-            font-size: 10px;
-        }
-        .social-icons {
-            padding: 20px;
-            a {
-                color: #fff;
-                margin-right: 10px;
-                .fa {
-                    font-size: 16px;
-                }
-                &:last-child {
-                    margin-right: 0px;
-                }
-            }
         }
     }
 }

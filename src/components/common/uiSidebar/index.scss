@@ -12,6 +12,10 @@
         transition: all .4s cubic-bezier(.25,.8,.25,1);
         transition-property: transform;
         will-change: transform;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     &.ui-sidebar-left .ui-sidebar-content{
         left: 0;
