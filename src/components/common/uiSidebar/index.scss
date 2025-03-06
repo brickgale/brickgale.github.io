@@ -13,9 +13,12 @@
         transition-property: transform;
         will-change: transform;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        .wrapper-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
     }
     &.ui-sidebar-left .ui-sidebar-content{
         left: 0;

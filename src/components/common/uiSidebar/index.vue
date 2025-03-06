@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { onMounted, ref, unref } from 'vue'
     import UiBackDrop from '@/components/common/uiBackDrop/index.vue'
+    import { OverlayScrollbarsComponent } from "overlayscrollbars-vue"
 
     const el = ref<HTMLDivElement | null>(null)
     const emit = defineEmits(['sidebar-opened', 'sidebar-closed'])
@@ -68,9 +69,22 @@
         @keyup.esc="close" tabindex="0" ref="el"
     >
         <div class="ui-sidebar-content">
-            <slot name="topCon"></slot>
-            <slot name="midCon"></slot>
-            <slot name="bottomCon"></slot>
+            <OverlayScrollbarsComponent
+                element="span"
+                class="main-con"
+                :options="{
+                    scrollbars: {
+                        theme: 'os-theme-dark',
+                    },
+                }"
+                defer
+            >
+            <div class="wrapper-flex">
+                <slot name="topCon"></slot>
+                <slot name="midCon"></slot>
+                <slot name="bottomCon"></slot>
+            </div>
+            </OverlayScrollbarsComponent>
         </div>
         <UiBackDrop class="ui-sidebar-backdrop" @close="close" />
     </div>
