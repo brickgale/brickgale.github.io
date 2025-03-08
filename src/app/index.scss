@@ -191,16 +191,16 @@ img {
 }
   
 .main-header {
-    border-top: 1px solid #474747;
-    border-bottom: 1px solid #474747;
     text-align: center;
     li {
+        display: block;
+        border-bottom: 1px solid #474747;
         a { 
             color: #a5a5a5;
             padding: 13px;
-            display: inline-block;
+            display: block;
             &.router-link-active {
-            color: #8e84d8;
+                color: #8e84d8;
             }
         }
     }

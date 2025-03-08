@@ -45,9 +45,11 @@
 </script>
 
 <template>
-    <div :class="['ui-burger-toggler', {'white': isWhite}]" ref="el" @click="toggle">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
+    <div class="toggler-con" @click="toggle">
+        <div :class="['ui-burger-toggler', {'white': isWhite}]" ref="el">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
     </div>
 </template>
 
