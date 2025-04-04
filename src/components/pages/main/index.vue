@@ -1,12 +1,10 @@
 <template>
     <div class="main wrapper row">
-        <div class="toggler-con">
-            <UiBurgerToggler 
-                @burger-opened="opened" 
-                @burger-closed="closed"
-                ref="toggler"
-            />
-        </div>
+        <UiBurgerToggler 
+            @burger-opened="opened" 
+            @burger-closed="closed"
+            ref="toggler"
+        />
         <OverlayScrollbarsComponent
             element="span"
             class="main-con"

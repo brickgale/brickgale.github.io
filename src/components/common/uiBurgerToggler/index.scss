@@ -1,8 +1,12 @@
+.toggler-con {
+  cursor: pointer;
+  position: relative;
+  z-index: 11;
+}
+
 .ui-burger-toggler {
     width: 20px;
     height: 18px;
-    position: relative;
-    z-index: 11;
     margin: 0;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -12,7 +16,6 @@
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    cursor: pointer;
     span {
       display: block;
       position: absolute;

@@ -13,9 +13,6 @@
             <div class="g1"></div>
             <div class="g2"></div>
             <div class="g3"></div>
-            <div class="g4"></div>
-            <div class="g5"></div>
-            <div class="interactive"></div>
         </div>
     </div>
 </template>
@@ -29,7 +26,6 @@
   --color3: 100, 220, 255;
   --color4: 200, 50, 50;
   --color5: 180, 180, 50;
-  --color-interactive: 140, 100, 255;
   --circle-size: 80%;
   --blending: hard-light;
 }
@@ -142,51 +138,6 @@
     animation: moveInCircle 40s linear infinite;
 
     opacity: 1;
-  }
-
-  .g4 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: var(--circle-size);
-    height: var(--circle-size);
-    top: calc(50% - var(--circle-size) / 2);
-    left: calc(50% - var(--circle-size) / 2);
-
-    transform-origin: calc(50% - 200px);
-    animation: moveHorizontal 40s ease infinite;
-
-    opacity: 0.7;
-  }
-
-  .g5 {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: calc(var(--circle-size) * 2);
-    height: calc(var(--circle-size) * 2);
-    top: calc(50% - var(--circle-size));
-    left: calc(50% - var(--circle-size));
-
-    transform-origin: calc(50% - 800px) calc(50% + 200px);
-    animation: moveInCircle 20s ease infinite;
-
-    opacity: 1;
-  }
-
-  .interactive {
-    position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-    mix-blend-mode: var(--blending);
-
-    width: 100%;
-    height: 100%;
-    top: -50%;
-    left: -50%;
-
-    opacity: 0.7;
   }
 }
 </style>
