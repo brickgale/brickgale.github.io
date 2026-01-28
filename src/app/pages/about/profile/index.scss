@@ -1,0 +1,20 @@
+.about-profile {
+  .box-con {
+    .timeline {
+      .content {
+        p {
+          margin: 0;
+          line-height: 1.6em;
+          white-space: pre-wrap;
+          &.main {
+            font-family: 'CircularStdBold';
+          }
+          &.sub {
+            color: #adadad;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
