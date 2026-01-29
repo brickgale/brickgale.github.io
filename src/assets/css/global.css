@@ -1,41 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @font-face {
   font-family: 'CircularStdBook';
-  src: url('../assets/fonts/CircularStd-Book.eot');
+  src: url('../fonts/CircularStd-Book.eot');
   src:
-    url('../assets/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/CircularStd-Book.woff') format('woff'),
-    url('../assets/fonts/CircularStd-Book.ttf') format('truetype');
+    url('../fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CircularStd-Book.woff') format('woff'),
+    url('../fonts/CircularStd-Book.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CircularStdBold';
-  src: url('../assets/fonts/CircularStd-Bold.eot');
+  src: url('../fonts/CircularStd-Bold.eot');
   src:
-    url('../assets/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/CircularStd-Bold.woff') format('woff'),
-    url('../assets/fonts/CircularStd-Bold.ttf') format('truetype');
+    url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CircularStd-Bold.woff') format('woff'),
+    url('../fonts/CircularStd-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'CircularStdBlack';
-  src: url('../assets/fonts/CircularStd-Black.eot');
+  src: url('../fonts/CircularStd-Black.eot');
   src:
-    url('../assets/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
-    url('../assets/fonts/CircularStd-Black.woff') format('woff'),
-    url('../assets/fonts/CircularStd-Black.ttf') format('truetype');
+    url('../fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/CircularStd-Black.woff') format('woff'),
+    url('../fonts/CircularStd-Black.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @layer base {
+  :root {
+    --primary-color: #8e84d8;
+    --secondary-color: #5f45a3;
+    --text-color: #3e3f43;
+    --background-color: #f5f5f5;
+  }
+
+  .dark {
+    --primary-color: #5f45a3;
+    --secondary-color: #8e84d8;
+    --text-color: #d1d1d1;
+    --background-color: #1e1e1e;
+  }
+  
   *:not(body),
   *::before,
   *::after {
@@ -87,6 +99,10 @@
     color: #3e3f43;
     font-weight: normal;
     text-decoration: none;
+  }
+
+  p {
+    margin: 0 0 0.5rem 0;
   }
 
   img {
@@ -179,7 +195,7 @@
       height: 100%;
       z-index: 1;
       opacity: 0.2;
-      background: url('../assets/bg_setup.png') no-repeat center;
+      background: url('../images/bg_setup.png') no-repeat center;
       background-repeat: no-repeat;
       background-position: 50% 0;
       -ms-background-size: cover;
@@ -198,6 +214,33 @@
         transform: scale(1.2);
       }
     }
+  }
+
+  .banner-img {
+    display: relative;
+  }
+  
+  .banner-img:before {
+    background: transparent;
+    opacity: 0.5;
+  }
+
+  .banner-img:after {
+    content: ' ';
+    z-index: 1;
+    opacity: 0.9;
+    background: url('../images/banner.jpg') no-repeat center;
+    background-repeat: no-repeat;
+    background-position: 0 53%;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .banner-img:hover:after {
+    transform: unset;
   }
 
   .main-header {

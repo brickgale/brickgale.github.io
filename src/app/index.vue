@@ -5,7 +5,6 @@ import { Sidebar } from '@/components/ui/sidebar';
 import ProfileCon from '@/components/partials/profileCon/index.vue';
 import SponsorMe from '@/components/partials/sponsorMe/index.vue';
 import 'overlayscrollbars/overlayscrollbars.css';
-import '@/app/index.css';
 
 const sidebar = ref<HTMLDivElement | null>(null);
 const adjContainer = ref<HTMLDivElement | null>(null);

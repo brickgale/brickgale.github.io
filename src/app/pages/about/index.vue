@@ -1,29 +1,23 @@
 <template>
-  <div class="about np">
-    <div class="graphic-header-con layered-bg"></div>
-
-    <div class="wrapper-con">
-      <div class="g-content">
-        <div class="row center-xs">
-          <div class="col-xs-10 col-md-6">
-            <div class="g-avatar-con">
-              <template v-for="(src, index) in imgsRef" :key="index">
-                <img :src="src" @click="show" />
-              </template>
-              <vue-easy-lightbox
-                :visible="visibleRef"
-                :imgs="imgsRef"
-                :index="indexRef"
-                @hide="onHide"
-              ></vue-easy-lightbox>
-            </div>
-            <div class="g-menu-con">
-              <Menu class="g-menu" :menu="menu"></Menu>
-            </div>
-          </div>
+  <div class="relative">
+    <div :class="graphicbgClass"></div>
+    <div class="flex flex-col max-w-[800px] m-auto p-8 justify-center items-center">
+      <div class="flex flex-col justify-center items-center w-full max-w-[300px] ">
+        <div class="max-w-[85px] rounded-md relative -mt-32 mb-8 z-10">
+          <template v-for="(img, index) in imgsRef" :key="index">
+            <img :src="typeof img === 'string' ? img : img?.src" @click="show" />
+          </template>
+          <vue-easy-lightbox
+            :visible="visibleRef"
+            :imgs="imgsRef"
+            :index="indexRef"
+            @hide="onHide"
+          ></vue-easy-lightbox>
+        </div>
+        <div class="g-menu-con">
+          <Menu class="g-menu" :menu="menu"></Menu>
         </div>
       </div>
-
       <router-view></router-view>
     </div>
   </div>
@@ -39,7 +33,9 @@ const menu = [
   { name: 'Misc', route: 'about-misc' },
 ];
 
-const profilePicSrc = new URL('/images/updated_prof_pic.jpg', import.meta.url).href;
+const graphicbgClass = "graphic-header-con layered-bg min-h-[200px] banner-img";
+
+const profilePicSrc = '/images/updated_prof_pic.jpg';
 
 const { show, onHide, visibleRef, indexRef, imgsRef } = useEasyLightbox({
   imgs: [profilePicSrc],
