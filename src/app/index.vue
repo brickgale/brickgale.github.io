@@ -2,7 +2,7 @@
 import { ref, provide } from 'vue';
 import { Menu } from '@/components/ui/menu';
 import { Sidebar } from '@/components/ui/sidebar';
-import ProfileCon from '@/components/partials/profileCon/index.vue';
+import { Profile } from '@/components/partials/profile';
 import SponsorMe from '@/components/partials/sponsorMe/index.vue';
 import 'overlayscrollbars/overlayscrollbars.css';
 
@@ -37,7 +37,7 @@ const menu = [
   >
     <template #topCon>
       <div class="top-con layered-bg">
-        <ProfileCon />
+        <Profile />
       </div>
     </template>
     <template #midCon>

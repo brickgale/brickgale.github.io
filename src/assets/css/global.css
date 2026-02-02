@@ -35,6 +35,7 @@
 
 @layer base {
   :root {
+    --font-sans: 'CircularStdBook', sans-serif;
     --primary-color: #8e84d8;
     --secondary-color: #5f45a3;
     --text-color: #3e3f43;
@@ -60,9 +61,9 @@
   }
 
   body {
+    @apply text-base;
     height: 100%;
-    font-size: 12px;
-    font-family: 'CircularStdBook';
+    font-family: var(--font-sans);
     display: flex;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
