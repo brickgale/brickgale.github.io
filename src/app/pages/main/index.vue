@@ -1,5 +1,5 @@
 <template>
-  <div class="main wrapper row">
+  <main class="main wrapper row">
     <BurgerToggler @burger-opened="opened" @burger-closed="closed" ref="toggler" />
     <OverlayScrollbarsComponent
       element="span"
@@ -13,7 +13,7 @@
     >
       <router-view></router-view>
     </OverlayScrollbarsComponent>
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

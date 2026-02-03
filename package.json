@@ -8,13 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "tailwind-merge": "^3.4.0",
     "vue": "^3.5.27"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^18.19.130",
     "@vitejs/plugin-vue": "^5.2.4",
+    "@vueuse/core": "^14.2.0",
     "autoprefixer": "^10.4.23",
     "clsx": "^2.1.1",
     "echarts": "^5.6.0",
@@ -25,6 +25,7 @@
     "overlayscrollbars-vue": "^0.5.9",
     "prettier": "^3.8.1",
     "sass": "^1.97.3",
+    "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vite": "^6.4.1",

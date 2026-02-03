@@ -1,8 +1,8 @@
 <template>
   <div class="relative z-10 h-[200px] justify-between flex flex-col items-center p-4 text-center text-white">
     <div class="flex flex-row -mr-1">
-      <img :class="cn(imgProfileClass, 'hover:-ml-2 z-19')" src="@/assets/monogram.png" />
-      <img :class="cn(imgProfileClass, 'hover:mr-2 z-20')" src="@/assets/me_avatar.jpg" />
+      <img :class="cn(imgProfileClass, '-rotate-15 z-19')" src="@/assets/monogram.png" />
+      <img :class="cn(imgProfileClass, 'rotate-15 z-20')" src="@/assets/me_avatar.jpg" />
     </div>
     <div>
       <p class="tracking-wide text-sm text-white">{{ profile.fullName }}</p>
@@ -21,6 +21,6 @@ import profile from '@/data/profile.json';
 import socialIcons from '@/data/socials.json';
 import { cn } from '@/utils/css';
 
-const imgProfileClass = 'w-[50px] h-[50px] shadow-sm wst -rotate-15 hover:rotate-15';
+const imgProfileClass = 'w-[50px] h-[50px] shadow-sm wst hover:scale-110 hover:z-21';
 </script>
 

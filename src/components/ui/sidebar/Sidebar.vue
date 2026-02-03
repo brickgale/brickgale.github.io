@@ -63,8 +63,8 @@ defineExpose({
 </script>
 
 <template>
-  <div
-    class="ui-sidebar"
+  <aside
+    class="ui-sidebar bg-gradient-to-b from-black to-neutral-700"
     :class="{ 'ui-sidebar-right': positionRight, 'ui-sidebar-left': !positionRight }"
     @keyup.esc="close"
     tabindex="0"
@@ -81,15 +81,13 @@ defineExpose({
         }"
         defer
       >
-        <div class="wrapper-flex">
-          <slot name="topCon"></slot>
-          <slot name="midCon"></slot>
-          <slot name="bottomCon"></slot>
+        <div class="flex flex-col justify-between h-screen">
+          <slot></slot>
         </div>
       </OverlayScrollbarsComponent>
     </div>
     <Backdrop class="ui-sidebar-backdrop" @close="close" />
-  </div>
+  </aside>
 </template>
 
 <style lang="scss" src="./index.scss" />

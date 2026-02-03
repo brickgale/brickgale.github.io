@@ -1,8 +1,8 @@
 <template>
   <div class="about-skills np">
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <div class="box-con">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="col-span-1 space-y-4">
+        <Card>
           <h3><i class="fa fa-code-fork"></i>Familiar Tech Stack (Web)</h3>
           <div class="content tech-stack">
             <h4>For Web Apps:</h4>
@@ -17,22 +17,22 @@
               <li>Gridsome</li>
             </ul>
           </div>
-        </div>
-        <div class="box-con">
+        </Card>
+        <Card>
           <h3><i class="fa fa-laptop"></i>Familiar Tech</h3>
           <div class="tags">
             <span v-for="tech in techs">{{ tech }}</span>
           </div>
-        </div>
+        </Card>
       </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="box-con">
+      <div class="col-span-1 space-y-4">
+        <Card>
           <h3><i class="fa fa-code"></i>Main Skill Chart</h3>
           <div class="chart-skills">
             <v-chart :option="options" auto-resize />
           </div>
-        </div>
-        <div class="box-con">
+        </Card>
+        <Card>
           <h3><i class="fa fa-laptop"></i>Familiar AI Tools</h3>
           <div class="content tech-stack">
             <ul class="normal-list">
@@ -43,7 +43,7 @@
               <li>Gemini</li>
             </ul>
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   </div>
@@ -51,6 +51,7 @@
 
 <script setup lang="ts">
 import { use } from 'echarts/core';
+import { Card } from '@/components/ui/card';
 import { CanvasRenderer } from 'echarts/renderers';
 import { RadarChart } from 'echarts/charts';
 import { PolarComponent, TitleComponent, TooltipComponent } from 'echarts/components';
