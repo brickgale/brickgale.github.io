@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="ui-menu">
+  <nav class="ui-menu">
     <ul>
       <li v-for="(item, key) in menu" :key="key">
         <router-link :to="{ name: item.route }">
@@ -20,5 +20,5 @@ const props = defineProps({
         </router-link>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>

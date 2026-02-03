@@ -108,6 +108,10 @@
     text-decoration: none;
   }
 
+  a.router-link-exact-active {
+    color: var(--primary-color);
+  }
+
   p {
     margin: 0 0 0.5rem 0;
   }
@@ -224,22 +228,6 @@
     transform: unset;
   }
 
-  .main-header {
-    text-align: center;
-    li {
-      display: block;
-      border-bottom: 1px solid #474747;
-      a {
-        color: var(--foreground);
-        padding: 13px;
-        display: block;
-        &.router-link-active {
-          color: #8e84d8;
-        }
-      }
-    }
-  }
-
   .main-sidebar {
     .ui-sidebar-content {
       background: linear-gradient(to bottom, #000000, #3d3d3d);
@@ -309,7 +297,6 @@
     }
     li {
       position: relative;
-      background-color: rgba(255, 255, 255, 0.2);
       padding: 0px 14px;
       width: 100%;
       &:not(:first-child) {

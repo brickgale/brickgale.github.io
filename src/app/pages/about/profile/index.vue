@@ -7,7 +7,7 @@
           <ul class="timeline">
             <li v-for="job in workHistory">
               <span></span>
-              <Card>
+              <Card class="bg-[var(--background-surface)]">
                 <p class="main">
                   {{ job.title }}
                 </p>
@@ -27,7 +27,7 @@
           <ul class="timeline">
             <li v-for="sy in education">
               <span></span>
-              <Card>
+              <Card class="bg-[var(--background-surface)]">
                 <p class="main">
                   {{ sy.title }}
                 </p>
