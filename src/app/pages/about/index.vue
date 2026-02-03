@@ -14,7 +14,7 @@
           :index="indexRef"
           @hide="onHide"
         ></vue-easy-lightbox>
-        <div class="g-menu-con">
+        <div>
           <Menu class="g-menu" :menu="menu"></Menu>
         </div>
       </Card>
@@ -27,11 +27,14 @@
 import { Card } from '@/components/ui/card';
 import { Menu } from '@/components/ui/menu';
 import VueEasyLightbox, { useEasyLightbox } from 'vue-easy-lightbox';
+import { cn } from '@/utils/css';
+
+const linkClasses = 'p-2.5 text-sm border-[var(--foreground-subtle)] hover:text-[var(--secondary-color)] transition-colors duration-300';
 
 const menu = [
-  { name: 'Skills', route: 'about-skills' },
-  { name: 'Profile', route: 'about' },
-  { name: 'Misc', route: 'about-misc' },
+  { name: 'Skills', route: 'about-skills', linkClasses: cn(linkClasses, 'border-t border-r') },
+  { name: 'Profile', route: 'about', linkClasses: cn(linkClasses, 'border-t') },
+  { name: 'Misc', route: 'about-misc', linkClasses: cn(linkClasses, 'border-t border-l') },
 ];
 
 const graphicbgClass = "graphic-header-con layered-bg min-h-[200px] banner-img";

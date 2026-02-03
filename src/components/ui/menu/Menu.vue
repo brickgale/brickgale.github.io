@@ -4,6 +4,7 @@ import { PropType } from 'vue';
 interface Menu {
   route: string;
   name: string;
+  linkClasses?: string;
 }
 
 const props = defineProps({
@@ -15,7 +16,7 @@ const props = defineProps({
   <nav class="ui-menu">
     <ul>
       <li v-for="(item, key) in menu" :key="key">
-        <router-link :to="{ name: item.route }">
+        <router-link :to="{ name: item.route }" :class="item.linkClasses">
           {{ item.name }}
         </router-link>
       </li>

@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="col-span-1 space-y-4">
         <Card>
-          <h3><i class="fa fa-code-fork"></i>Familiar Tech Stack (Web)</h3>
+          <h3 class="mb-4"><i class="fa fa-code-fork mr-3"></i>Familiar Tech Stack (Web)</h3>
           <div class="content tech-stack">
             <h4>For Web Apps:</h4>
             <ul class="normal-list">
@@ -19,7 +19,7 @@
           </div>
         </Card>
         <Card>
-          <h3><i class="fa fa-laptop"></i>Familiar Tech</h3>
+          <h3 class="mb-4"><i class="fa fa-laptop mr-3"></i>Familiar Tech</h3>
           <div class="tags">
             <span v-for="tech in techs">{{ tech }}</span>
           </div>
@@ -27,13 +27,13 @@
       </div>
       <div class="col-span-1 space-y-4">
         <Card>
-          <h3><i class="fa fa-code"></i>Main Skill Chart</h3>
+          <h3 class="mb-4"><i class="fa fa-code mr-3"></i>Main Skill Chart</h3>
           <div class="chart-skills">
             <v-chart :option="options" auto-resize />
           </div>
         </Card>
         <Card>
-          <h3><i class="fa fa-laptop"></i>Familiar AI Tools</h3>
+          <h3 class="mb-4"><i class="fa fa-laptop mr-3"></i>Familiar AI Tools</h3>
           <div class="content tech-stack">
             <ul class="normal-list">
               <li>Cursor</li>

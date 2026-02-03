@@ -2,14 +2,14 @@
   <div class="sponsor-me np">
     <div class="addtional-info layered-bg">
       <div class="content">
-        <h3>Stay Tuned</h3>
-        <p>Cooking up something exciting. 💎</p>
+        <h3 class="text-white">Stay Tuned</h3>
+        <p class="text-white text-sm">Cooking up something exciting. 💎</p>
       </div>
     </div>
     <div class="paypal-me">
       <div class="content">
-        <h3>Buy me a Cup of Coffee</h3>
-        <p>Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
+        <h3 class="text-[var(--dark)]">Buy me a Cup of Coffee</h3>
+        <p class="text-[var(--dark)] text-sm">Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
         <a href="https://www.paypal.me/brianmonsales/100" class="btn paypal" target="_blank">
           <i class="fa fa-paypal"></i>
           Send some love
@@ -18,8 +18,8 @@
     </div>
     <div class="contact-con layered-bg">
       <div class="content">
-        <h3>Contact Me</h3>
-        <p>
+        <h3 class="text-white">Contact Me</h3>
+        <p class="text-white text-sm">
           Do you want a stunning website for your existing business?
           <a href="mailto:brianmonsales@gmail.com" target="_top">Email me! </a> 🔥
         </p>

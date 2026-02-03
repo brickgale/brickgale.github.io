@@ -2,16 +2,16 @@
   <div class="about-profile np">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="col-span-1">
-        <Card>
-          <h3><i class="fa fa-briefcase"></i>Work History</h3>
+        <Card class="gap-4">
+          <h3><i class="fa fa-briefcase mr-3"></i>Work History</h3>
           <ul class="timeline">
             <li v-for="job in workHistory">
               <span></span>
-              <Card class="bg-[var(--background-surface)]">
-                <p class="main">
+              <Card class="hover:ring-[var(--primary-color)/0.5]">
+                <p class="leading-4 mb-2">
                   {{ job.title }}
                 </p>
-                <p class="sub">{{ job.position }}</p>
+                <p class="text-[var(--foreground-subtle)] mb-0">{{ job.position }}</p>
               </Card>
               <span class="timestamp">
                 <span>{{ job.to }}</span>
@@ -22,16 +22,16 @@
         </Card>
       </div>
       <div class="col-span-1">
-        <Card>
-          <h3><i class="fa fa-graduation-cap"></i>Eduation</h3>
+        <Card class="gap-4">
+          <h3><i class="fa fa-graduation-cap mr-3"></i>Eduation</h3>
           <ul class="timeline">
             <li v-for="sy in education">
               <span></span>
-              <Card class="bg-[var(--background-surface)]">
-                <p class="main">
+              <Card class="hover:ring-[var(--primary-color)/0.5]">
+                <p class="leading-4 mb-2">
                   {{ sy.title }}
                 </p>
-                <p class="sub">{{ sy.address }}</p>
+                <p class="text-[var(--foreground-subtle)] mb-0">{{ sy.address }}</p>
               </Card>
               <span class="timestamp">
                 <span>{{ sy.to }}</span>
@@ -55,5 +55,3 @@ const { education, workHistory } = profile;
 workHistory.reverse();
 education.reverse();
 </script>
-
-<style lang="scss" src="./index.scss" />

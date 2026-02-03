@@ -36,6 +36,7 @@
 
 @layer base {
   :root {
+    --dark: oklch(20% 0.01 240);
     --background: oklch(98% 0.01 240);
     --background-muted: oklch(95% 0.01 240);
     --background-surface: oklch(92% 0.01 240);
@@ -45,6 +46,16 @@
     --font-sans: 'CircularStdBook', sans-serif;
     --primary-color: #8e84d8;
     --secondary-color: #5f45a3;
+
+    --text-xs: 0.68rem;
+    --text-sm: 0.75rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
   }
 
   .dark {

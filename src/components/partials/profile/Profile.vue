@@ -5,8 +5,8 @@
       <img :class="cn(imgProfileClass, 'rotate-15 z-20')" src="@/assets/me_avatar.jpg" />
     </div>
     <div>
-      <p class="tracking-wide text-sm text-white">{{ profile.fullName }}</p>
-      <p class="leading-relaxed tracking-wide text-white text-xs mb-0">{{ profile.title }}</p>
+      <p class="tracking-wide text-white tracking-wide">{{ profile.fullName }}</p>
+      <p class="leading-relaxed tracking-widest text-sm opacity-80 mb-0">{{ profile.title }}</p>
     </div>
     <div class="[&>a]:text-white [&>a]:mr-2">
       <a v-for="item in socialIcons" :href="item.link" :key="item.id" target="_blank">
