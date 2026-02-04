@@ -1,8 +1,8 @@
 <template>
   <div class="relative z-10 h-[200px] justify-between flex flex-col items-center p-4 text-center text-white">
     <div class="flex flex-row -mr-1">
-      <img :class="cn(imgProfileClass, '-rotate-15 z-19')" src="@/assets/monogram.png" />
-      <img :class="cn(imgProfileClass, 'rotate-15 z-20')" src="@/assets/me_avatar.jpg" />
+      <img :class="cn(imgProfileClass, '-rotate-15 z-18')" src="@/assets/monogram.png" />
+      <img :class="cn(imgProfileClass, 'rotate-15 z-19')" src="@/assets/me_avatar.jpg" />
     </div>
     <div>
       <p class="tracking-wide text-white tracking-wide">{{ profile.fullName }}</p>

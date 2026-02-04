@@ -1,13 +1,13 @@
 <template>
   <div class="sponsor-me np">
     <div class="addtional-info layered-bg">
-      <div class="content">
+      <div class="p-4 tracking-wide">
         <h3 class="text-white">Stay Tuned</h3>
         <p class="text-white text-sm">Cooking up something exciting. 💎</p>
       </div>
     </div>
     <div class="paypal-me">
-      <div class="content">
+      <div class="p-4 tracking-wide">
         <h3 class="text-[var(--dark)]">Buy me a Cup of Coffee</h3>
         <p class="text-[var(--dark)] text-sm">Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
         <a href="https://www.paypal.me/brianmonsales/100" class="btn paypal" target="_blank">
@@ -17,11 +17,11 @@
       </div>
     </div>
     <div class="contact-con layered-bg">
-      <div class="content">
+      <div class="p-4 tracking-wide">
         <h3 class="text-white">Contact Me</h3>
         <p class="text-white text-sm">
           Do you want a stunning website for your existing business?
-          <a href="mailto:brianmonsales@gmail.com" target="_top">Email me! </a> 🔥
+          <a href="mailto:brianmonsales@gmail.com" class="text-primary" target="_top">Email me! </a> 🔥
         </p>
       </div>
     </div>
@@ -40,16 +40,6 @@
       &:after {
         background: url('@/assets/me_avatar.jpg') no-repeat center;
         background-position: 65% 20%;
-      }
-    }
-    .content {
-      color: #fff;
-      padding: 20px;
-      > h3 {
-        font-family: 'CircularStdBold';
-      }
-      a {
-        color: #fff;
       }
     }
   }

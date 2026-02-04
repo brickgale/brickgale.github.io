@@ -120,6 +120,14 @@
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 
+  .text-primary {
+    color: var(--primary-color);
+  }
+
+  .text-secondary {
+    color: var(--secondary-color);
+  }
+
   .hide-on-mobile {
     @media (max-width: 768px) {
       display: none;
@@ -174,7 +182,7 @@
       -webkit-background-size: cover;
       background-size: cover;
     }
-    .content {
+    &>div {
       position: relative;
       z-index: 10;
     }
