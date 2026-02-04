@@ -1,5 +1,7 @@
 <template>
-  <div class="relative z-10 h-[200px] justify-between flex flex-col items-center p-4 text-center text-white">
+  <div
+    class="relative z-10 h-[200px] justify-between flex flex-col items-center p-4 text-center text-white"
+  >
     <div class="flex flex-row -mr-1">
       <img :class="cn(imgProfileClass, '-rotate-15 z-18')" src="@/assets/monogram.png" />
       <img :class="cn(imgProfileClass, 'rotate-15 z-19')" src="@/assets/me_avatar.jpg" />
@@ -23,4 +25,3 @@ import { cn } from '@/utils/css';
 
 const imgProfileClass = 'w-[50px] h-[50px] shadow-sm wst hover:scale-110 hover:z-21';
 </script>
-

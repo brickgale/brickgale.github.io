@@ -34,7 +34,11 @@
         <Card>
           <h3 class="mb-3"><i class="fa fa-code mr-3"></i>Main Skill Chart</h3>
           <div class="w-full h-[360px]">
-            <v-chart :option="options" auto-resize class="w-full mx-auto max-w-[320px] md:h-[75vw]" />
+            <v-chart
+              :option="options"
+              auto-resize
+              class="w-full mx-auto max-w-[320px] md:h-[75vw]"
+            />
           </div>
         </Card>
         <Card>

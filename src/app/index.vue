@@ -15,7 +15,10 @@ const isDark = useDark({
 });
 const toggleTheme = useToggle(isDark);
 
-provide('theme', computed(() => (isDark.value ? 'dark' : 'light')));
+provide(
+  'theme',
+  computed(() => (isDark.value ? 'dark' : 'light'))
+);
 provide('toggleTheme', toggleTheme);
 
 const sidebar = ref<HTMLDivElement | null>(null);
@@ -57,15 +60,14 @@ const menu = [
     </div>
   </Sidebar>
   <div class="main-container" ref="adjContainer">
-      <Button
-        v-if="!$attrs.visibleRef"
-        @click="toggleTheme()"
-        type="ghost"
-        class="fixed top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-19 text-lg"
-      >
-        <i v-if="!isDark" class="fa fa-moon-o" aria-hidden="true"></i>
-        <i v-else class="fa fa-sun-o" aria-hidden="true"></i>
-      </Button>
+    <Button
+      @click="toggleTheme()"
+      type="ghost"
+      class="fixed top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-19 text-lg"
+    >
+      <i v-if="!isDark" class="fa fa-moon-o" aria-hidden="true"></i>
+      <i v-else class="fa fa-sun-o" aria-hidden="true"></i>
+    </Button>
     <router-view />
   </div>
 </template>

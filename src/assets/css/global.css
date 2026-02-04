@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @font-face {
@@ -70,7 +70,7 @@
     --primary-color: #5f45a3;
     --secondary-color: #8e84d8;
   }
-  
+
   *:not(body),
   *::before,
   *::after {
@@ -182,7 +182,7 @@
       -webkit-background-size: cover;
       background-size: cover;
     }
-    &>div {
+    & > div {
       position: relative;
       z-index: 10;
     }
@@ -197,7 +197,7 @@
   .banner-img {
     display: relative;
   }
-  
+
   .banner-img:before {
     background: transparent;
     opacity: 0.5;

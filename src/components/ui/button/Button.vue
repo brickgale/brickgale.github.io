@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { computed } from 'vue';
 import { cn } from '@/utils/css';
@@ -6,7 +5,7 @@ import { cn } from '@/utils/css';
 type ButtonProps = {
   type: 'ghost' | 'default';
   class?: string;
-}
+};
 
 const props = defineProps<ButtonProps>();
 

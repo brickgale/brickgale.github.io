@@ -9,7 +9,9 @@
     <div class="paypal-me">
       <div class="p-4 tracking-wide">
         <h3 class="text-[var(--dark)]">Buy me a Cup of Coffee</h3>
-        <p class="text-[var(--dark)] text-sm">Help a brotha out by buying a cup of coffee. Cheers! 🙏</p>
+        <p class="text-[var(--dark)] text-sm">
+          Help a brotha out by buying a cup of coffee. Cheers! 🙏
+        </p>
         <a href="https://www.paypal.me/brianmonsales/100" class="btn paypal" target="_blank">
           <i class="fa fa-paypal"></i>
           Send some love
@@ -21,7 +23,8 @@
         <h3 class="text-white">Contact Me</h3>
         <p class="text-white text-sm">
           Do you want a stunning website for your existing business?
-          <a href="mailto:brianmonsales@gmail.com" class="text-primary" target="_top">Email me! </a> 🔥
+          <a href="mailto:brianmonsales@gmail.com" class="text-primary" target="_top">Email me! </a>
+          🔥
         </p>
       </div>
     </div>
