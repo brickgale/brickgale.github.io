@@ -23,7 +23,7 @@
       </div>
       <div class="col-span-1">
         <Card class="gap-4">
-          <h3><i class="fa fa-graduation-cap mr-3"></i>Eduation</h3>
+          <h3><i class="fa fa-graduation-cap mr-3"></i>Education</h3>
           <ul class="timeline">
             <li v-for="sy in education">
               <span></span>

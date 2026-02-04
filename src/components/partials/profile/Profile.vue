@@ -7,7 +7,7 @@
       <img :class="cn(imgProfileClass, 'rotate-15 z-19')" src="@/assets/me_avatar.jpg" />
     </div>
     <div>
-      <p class="tracking-wide text-white tracking-wide">{{ profile.fullName }}</p>
+      <p class="tracking-wide text-white">{{ profile.fullName }}</p>
       <p class="leading-relaxed tracking-widest text-sm opacity-80 mb-0">{{ profile.title }}</p>
     </div>
     <div class="[&>a]:text-white [&>a]:mr-2">
