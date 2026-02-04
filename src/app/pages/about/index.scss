@@ -1,0 +1,22 @@
+.about {
+  .graphic-con {
+    box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.12);
+    position: relative;
+    min-height: 400px;
+    @media (max-width: 500px) {
+      min-height: 200px;
+    }
+    .big_avatar {
+      position: absolute;
+      max-width: 300px;
+      width: 100%;
+      bottom: 0;
+      right: 0;
+      padding-left: 130px;
+    }
+  }
+  .box-con {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}

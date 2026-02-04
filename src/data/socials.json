@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "link": "https://github.com/brickgale",
+    "class": "fa fa-github"
+  },
+  {
+    "id": 2,
+    "link": "https://www.facebook.com/brian.monsales",
+    "class": "fa fa-facebook"
+  },
+  {
+    "id": 3,
+    "link": "https://www.instagram.com/borntobeatroll",
+    "class": "fa fa-instagram"
+  },
+  {
+    "id": 4,
+    "link": "https://www.linkedin.com/in/brianmonsales",
+    "class": "fa fa-linkedin"
+  },
+  {
+    "id": 5,
+    "link": "https://dribbble.com/brickgale",
+    "class": "fa fa-dribbble"
+  }
+]
