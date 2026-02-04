@@ -14,7 +14,7 @@ const props = defineProps({
 
 <template>
   <nav class="ui-menu">
-    <ul>
+    <ul class="list-none m-0 p-0 [&>li]:inline-block [&>li]:m-0">
       <li v-for="(item, key) in menu" :key="key">
         <router-link :to="{ name: item.route }" :class="item.linkClasses">
           {{ item.name }}

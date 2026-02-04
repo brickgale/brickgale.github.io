@@ -44,6 +44,8 @@
     --foreground-muted: oklch(40% 0.01 240);
     --foreground-subtle: oklch(60% 0.01 240);
     --font-sans: 'CircularStdBook', sans-serif;
+    --font-sans-bold: 'CircularStdBold', sans-serif;
+    --font-sans-black: 'CircularStdBlack', sans-serif;
     --primary-color: #8e84d8;
     --secondary-color: #5f45a3;
 
@@ -98,19 +100,8 @@
   h4,
   h5 {
     color: var(--foreground);
-    font-weight: normal;
-    margin: 0px;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0;
+    font-family: var(--font-sans-bold);
+    @apply mb-0;
   }
 
   a {

@@ -3,15 +3,15 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="col-span-1 space-y-4">
         <Card>
-          <h3 class="mb-4"><i class="fa fa-code-fork mr-3"></i>Familiar Tech Stack (Web)</h3>
-          <div class="content tech-stack">
+          <h3 class="mb-3"><i class="fa fa-code-fork mr-3"></i>Familiar Tech Stack (Web)</h3>
+          <div class="px-5 space-y-2">
             <h4>For Web Apps:</h4>
-            <ul class="normal-list">
+            <ul class="list-[circle] pl-4 [&>li]:list-item">
               <li>LAMP / LEMP <br />- Linux, Apache / Nginx, Mysql, PHP</li>
               <li>MERN / MEVN <br />- MogoDB, Express, React / Vue, NodeJS</li>
             </ul>
             <h4>For Landing Pages:</h4>
-            <ul class="normal-list">
+            <ul class="list-[circle] pl-4 [&>li]:list-item">
               <li>Wordpress</li>
               <li>VuePress / VitePress</li>
               <li>Gridsome</li>
@@ -19,23 +19,28 @@
           </div>
         </Card>
         <Card>
-          <h3 class="mb-4"><i class="fa fa-laptop mr-3"></i>Familiar Tech</h3>
-          <div class="tags">
-            <span v-for="tech in techs">{{ tech }}</span>
+          <h3 class="mb-3"><i class="fa fa-laptop mr-3"></i>Familiar Tech</h3>
+          <div class="flex flex-wrap p-0">
+            <span
+              v-for="item in tech"
+              class="px-2.5 py-0.5 rounded-[14px] bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] text-white text-sm mr-1.5 mb-1.5"
+            >
+              {{ item }}
+            </span>
           </div>
         </Card>
       </div>
       <div class="col-span-1 space-y-4">
         <Card>
-          <h3 class="mb-4"><i class="fa fa-code mr-3"></i>Main Skill Chart</h3>
-          <div class="chart-skills">
-            <v-chart :option="options" auto-resize />
+          <h3 class="mb-3"><i class="fa fa-code mr-3"></i>Main Skill Chart</h3>
+          <div class="w-full h-[360px]">
+            <v-chart :option="options" auto-resize class="w-full mx-auto max-w-[320px] md:h-[75vw]" />
           </div>
         </Card>
         <Card>
-          <h3 class="mb-4"><i class="fa fa-laptop mr-3"></i>Familiar AI Tools</h3>
-          <div class="content tech-stack">
-            <ul class="normal-list">
+          <h3 class="mb-3"><i class="fa fa-laptop mr-3"></i>Familiar AI Tools</h3>
+          <div class="px-5 space-y-2">
+            <ul class="list-[circle] pl-4 [&>li]:list-item">
               <li>Cursor</li>
               <li>Antigravity</li>
               <li>GitHub Copilot</li>
@@ -50,56 +55,16 @@
 </template>
 
 <script setup lang="ts">
+import VChart from 'vue-echarts';
+import { ref } from 'vue';
 import { use } from 'echarts/core';
 import { Card } from '@/components/ui/card';
 import { CanvasRenderer } from 'echarts/renderers';
 import { RadarChart } from 'echarts/charts';
 import { PolarComponent, TitleComponent, TooltipComponent } from 'echarts/components';
-import VChart, { THEME_KEY } from 'vue-echarts';
-import { ref, provide } from 'vue';
+import skills from '@/data/skills.json';
 
-provide(THEME_KEY, 'light');
-
-const techs = [
-  'Laravel',
-  'Nextjs',
-  'Vuejs',
-  'Angularjs',
-  'Reactjs',
-  'TailwindCSS',
-  'Typescript',
-  'Express',
-  'Prisma',
-  'Vite',
-  'Webpack',
-  'Docker',
-  'Gridsome',
-  'SkwayJs',
-  'd3js',
-  'Nodejs',
-  'AWS',
-  'MongoDB',
-  'Shopify',
-  'Magento',
-  'Heroku',
-  'Gulp',
-  'PostgreSQL',
-  'MySQL',
-  'jQuery',
-  'Wordpress',
-  'Vagrant',
-  'GIT',
-  'SCSS',
-  'HTML',
-  'CSS',
-  'PHP',
-  'JS',
-  'WebRTC',
-  'Shell Scripting',
-  'Adobe Premier',
-  'Adobe Photoshop',
-  'Adobe Illustrator',
-];
+const { tech } = skills;
 
 use([CanvasRenderer, RadarChart, PolarComponent, TitleComponent, TooltipComponent]);
 
@@ -125,5 +90,3 @@ const options = ref({
   ],
 });
 </script>
-
-<style lang="scss" src="./index.scss" />
