@@ -57,7 +57,12 @@ const menu = [
     </div>
   </Sidebar>
   <div class="main-container" ref="adjContainer">
-      <Button @click="toggleTheme()" type="ghost" class="fixed top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-20 text-lg">
+      <Button
+        v-if="!$attrs.visibleRef"
+        @click="toggleTheme()"
+        type="ghost"
+        class="fixed top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-20 text-lg"
+      >
         <i v-if="!isDark" class="fa fa-moon-o" aria-hidden="true"></i>
         <i v-else class="fa fa-sun-o" aria-hidden="true"></i>
       </Button>

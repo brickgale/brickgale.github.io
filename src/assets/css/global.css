@@ -113,14 +113,6 @@
   a.router-link-exact-active {
     color: var(--primary-color);
   }
-
-  p {
-    margin: 0 0 0.5rem 0;
-  }
-
-  img {
-    width: 100%;
-  }
 }
 
 @layer utilities {
@@ -142,15 +134,6 @@
     display: none;
     @media (max-width: 768px) {
       display: flex;
-    }
-  }
-
-  .row {
-    margin-left: -10px;
-    margin-right: -10px;
-    > div[class*='col-'] {
-      padding-right: 10px;
-      padding-left: 10px;
     }
   }
 
@@ -230,22 +213,6 @@
     transform: unset;
   }
 
-  .main-sidebar {
-    .ui-sidebar-content {
-      background: linear-gradient(to bottom, #000000, #3d3d3d);
-      .logo-con {
-        text-align: center;
-        padding: 30px;
-        img.avatar {
-          width: 90px;
-        }
-      }
-      .mid-con {
-        flex: 3;
-      }
-    }
-  }
-
   .main-container {
     position: absolute;
     width: 100%;
@@ -261,15 +228,6 @@
       height: 100%;
       @media (max-width: 768px) {
         height: auto;
-      }
-      &.row {
-        margin: 0;
-        > div[class*='col-'] {
-          padding: 0;
-        }
-        .padded {
-          padding: 20px;
-        }
       }
     }
     .lightbox {
