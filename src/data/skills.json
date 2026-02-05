@@ -73,5 +73,12 @@
       "name": "CMS / No-code",
       "description": "Wordpress, Webflow, Framer"
     }
+  ],
+  "aiTools": [
+    "Cursor",
+    "Antigravity",
+    "GitHub Copilot",
+    "ChatGPT",
+    "Gemini"
   ]
 }

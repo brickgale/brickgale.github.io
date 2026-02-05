@@ -51,7 +51,7 @@ const menu = [
   >
     <Profile />
     <div class="flex flex-col flex-grow">
-      <Menu class="text-center [&>ul>li]:block [&>ul>li>a]:block [&>ul>li>a]:border-r-4 [&>ul>li>a]:p-3 [&>ul>li]:border-b-1 [&>ul>li]:border-b-[var(--foreground-subtle)]/30 [&>ul>li>a.router-link-active]:!border-r-4 [&>ul>li>a:not(.router-link-active)]:border-r-transparent" :menu="menu" />
+      <Menu class="text-center [&>ul>li]:block [&>ul>li>a]:block [&>ul>li>a]:border-r-4 [&>ul>li>a]:p-3 [&>ul>li]:border-b-1 [&>ul>li]:border-b-[var(--foreground-subtle)]/30 [&>ul>li>a.router-link-active]:border-r-4 [&>ul>li>a.router-link-active]:border-r-[var(--secondary-color)] [&>ul>li>a.router-link-active]:text-[var(--secondary-color)] [&>ul>li>a:not(.router-link-active)]:border-r-transparent" :menu="menu" />
     </div>
     <SponsorMe />
   </Sidebar>
