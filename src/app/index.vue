@@ -49,21 +49,17 @@ const menu = [
     @sidebar-opened="opened"
     @sidebar-closed="closed"
   >
-    <div class="top-con layered-bg">
-      <Profile />
+    <Profile />
+    <div class="flex flex-col flex-grow">
+      <Menu class="text-center [&>ul>li]:block [&>ul>li>a]:block [&>ul>li>a]:border-r-4 [&>ul>li>a]:p-3 [&>ul>li]:border-b-1 [&>ul>li]:border-b-[var(--foreground-subtle)]/30 [&>ul>li>a.router-link-active]:!border-r-4 [&>ul>li>a:not(.router-link-active)]:border-r-transparent" :menu="menu" />
     </div>
-    <div class="mid-con">
-      <Menu class="text-center [&>ul>li]:block [&>ul>li>a]:block [&>ul>li>a]:p-4" :menu="menu" />
-    </div>
-    <div class="buttom-con">
-      <SponsorMe />
-    </div>
+    <SponsorMe />
   </Sidebar>
   <div class="main-container" ref="adjContainer">
     <Button
       @click="toggleTheme()"
       type="ghost"
-      class="fixed top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-19 text-lg"
+      class="absolute top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-19 text-lg"
     >
       <i v-if="!isDark" class="fa fa-moon-o" aria-hidden="true"></i>
       <i v-else class="fa fa-sun-o" aria-hidden="true"></i>

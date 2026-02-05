@@ -111,7 +111,7 @@
   }
 
   a.router-link-exact-active {
-    color: var(--primary-color);
+    color: var(--secondary-color);
   }
 }
 

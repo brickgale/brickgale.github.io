@@ -7,14 +7,15 @@
           <div class="px-5 space-y-2">
             <h4>For Web Apps:</h4>
             <ul class="list-[circle] pl-4 [&>li]:list-item">
-              <li>LAMP / LEMP <br />- Linux, Apache / Nginx, Mysql, PHP</li>
-              <li>MERN / MEVN <br />- MogoDB, Express, React / Vue, NodeJS</li>
+              <li v-for="item in webappTechStack" :key="item.name">
+                {{ item.name }} <br />- {{ item.description }}
+              </li>
             </ul>
             <h4>For Landing Pages:</h4>
             <ul class="list-[circle] pl-4 [&>li]:list-item">
-              <li>Wordpress</li>
-              <li>VuePress / VitePress</li>
-              <li>Gridsome</li>
+              <li v-for="item in landingPageTechStack" :key="item.name">
+                {{ item.name }} <br />- {{ item.description }}
+              </li>
             </ul>
           </div>
         </Card>
@@ -37,12 +38,12 @@
             <v-chart
               :option="options"
               auto-resize
-              class="w-full mx-auto max-w-[320px] md:h-[75vw]"
+              class="w-full mx-auto max-w-[320px] md:h-[70vw]"
             />
           </div>
         </Card>
         <Card>
-          <h3 class="mb-3"><i class="fa fa-laptop mr-3"></i>Familiar AI Tools</h3>
+          <h3 class="mb-3"><i class="fa fa-sitemap mr-3"></i>Familiar AI Tools</h3>
           <div class="px-5 space-y-2">
             <ul class="list-[circle] pl-4 [&>li]:list-item">
               <li>Cursor</li>
@@ -51,6 +52,16 @@
               <li>ChatGPT</li>
               <li>Gemini</li>
             </ul>
+          </div>
+        </Card>
+        <Card>
+          <h3 class="mb-3"><i class="fa fa-github mr-3"></i>GitHub Contributions</h3>
+          <div class="w-full overflow-x-auto overflow-y-hidden">
+            <img
+              src="https://contribution.oooo.so/_/brickgale?chart=calendar&format=svg&weeks=50&theme=purple&widget_size=small"
+              alt="GitHub Contribution Graph"
+              class="max-w-[600px] h-[100px] -m-2"
+            />
           </div>
         </Card>
       </div>
@@ -68,7 +79,7 @@ import { RadarChart } from 'echarts/charts';
 import { PolarComponent, TitleComponent, TooltipComponent } from 'echarts/components';
 import skills from '@/data/skills.json';
 
-const { tech } = skills;
+const { tech, webappTechStack, landingPageTechStack } = skills;
 
 use([CanvasRenderer, RadarChart, PolarComponent, TitleComponent, TooltipComponent]);
 

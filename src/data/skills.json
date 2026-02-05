@@ -45,5 +45,33 @@
     "Adobe Premier",
     "Adobe Photoshop",
     "Adobe Illustrator"
+  ],
+  "webappTechStack": [
+    {
+      "name": "LAMP / LEMP",
+      "description": "Linux, Apache / Nginx, Mysql, PHP"
+    },
+    {
+      "name": "MERN / MEVN",
+      "description": "MongoDB, Express, React / Vue, Nodejs"
+    },
+    {
+      "name": "PERN",
+      "description": "PostgreSQL, Express, React, Nodejs"
+    },
+    {
+      "name": "Nextbase",
+      "description": "Nextjs, Supabase"
+    }
+  ],
+  "landingPageTechStack": [
+    {
+      "name": "JAMstack",
+      "description": "Javascript, APIs, Markup (SSG like Nuxtjs, Gridsome, Vuepress)"
+    },
+    {
+      "name": "CMS / No-code",
+      "description": "Wordpress, Webflow, Framer"
+    }
   ]
 }
