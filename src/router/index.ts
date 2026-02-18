@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 import Main from '@/app/pages/main/index.vue';
 import About from '@/app/pages/about/index.vue';
 import AboutProfile from '@/app/pages/about/profile/index.vue';
@@ -8,7 +8,7 @@ import Projects from '@/app/pages/projects/index.vue';
 import Blog from '@/app/pages/blog/index.vue';
 // import NotFound from '../components/NotFound.vue'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'root',
@@ -58,7 +58,4 @@ const routes = [
   },
 ];
 
-export default createRouter({
-  history: createWebHashHistory(),
-  routes,
-});
+export default routes;

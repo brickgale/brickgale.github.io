@@ -4,12 +4,15 @@
       <div class="col-span-1 space-y-4">
         <Card>
           <h3 class="mb-3"><i class="fa fa-sitemap mr-3"></i>Familiar AI Tools</h3>
-          <div class="px-5 space-y-2">
-            <ul class="list-[circle] pl-4 [&>li]:list-item">
-              <li v-for="item in aiTools" :key="item">
-                {{ item }}
-              </li>
-            </ul>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+            <div
+              v-for="item in aiToolEntries"
+              :key="item.name"
+              class="flex flex-col items-center text-center text-sm"
+            >
+              <component v-if="item.Icon" :is="item.Icon" :size="28" />
+              <span class="mt-1">{{ item.name }}</span>
+            </div>
           </div>
         </Card>
         <Card>
@@ -72,18 +75,33 @@
 </template>
 
 <script setup lang="ts">
-import VChart from 'vue-echarts';
-import { ref } from 'vue';
-import { use } from 'echarts/core';
-import { Card } from '@/components/ui/card';
-import { CanvasRenderer } from 'echarts/renderers';
-import { RadarChart } from 'echarts/charts';
-import { PolarComponent, TitleComponent, TooltipComponent } from 'echarts/components';
-import skills from '@/data/skills.json';
+import VChart from 'vue-echarts'
+import { ref } from 'vue'
+import type { Component } from 'vue'
+import { use } from 'echarts/core'
+import { Card } from '@/components/ui/card'
+import { CanvasRenderer } from 'echarts/renderers'
+import { RadarChart } from 'echarts/charts'
+import { PolarComponent, TitleComponent, TooltipComponent } from 'echarts/components'
+import { Antigravity, Cursor, Gemini, GithubCopilot, OpenAI } from '@/components/svgs'
+import skills from '@/data/skills.json'
 
-const { tech, webappTechStack, landingPageTechStack, aiTools } = skills;
+const { tech, webappTechStack, landingPageTechStack, aiTools } = skills
 
-use([CanvasRenderer, RadarChart, PolarComponent, TitleComponent, TooltipComponent]);
+const aiToolIconMap: Record<string, Component> = {
+  Cursor,
+  Antigravity,
+  Copilot: GithubCopilot,
+  OpenAI,
+  Gemini,
+}
+
+const aiToolEntries = aiTools.map(name => ({
+  name,
+  Icon: aiToolIconMap[name] ?? null,
+}))
+
+use([CanvasRenderer, RadarChart, PolarComponent, TitleComponent, TooltipComponent])
 
 const options = ref({
   tooltip: {},
@@ -105,5 +123,5 @@ const options = ref({
       data: [{ value: [9, 10, 10, 7, 8, 8] }],
     },
   ],
-});
+})
 </script>

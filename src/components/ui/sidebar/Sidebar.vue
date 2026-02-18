@@ -22,7 +22,10 @@ const props = defineProps({
 });
 
 const _visible = ref(true);
-const fullWidth = ref(document.documentElement.clientWidth);
+const fullWidth = ref(0);
+const isClient = typeof window !== 'undefined';
+
+const getClientWidth = () => (isClient ? document.documentElement.clientWidth : 0);
 
 function open() {
   _visible.value = true;
@@ -39,7 +42,8 @@ function close() {
 }
 
 function handleResize() {
-  fullWidth.value = document.documentElement.clientWidth;
+  if (!isClient) return;
+  fullWidth.value = getClientWidth();
   if (unref(fullWidth) <= 1024 && _visible) {
     close();
   }
@@ -49,6 +53,7 @@ function handleResize() {
 }
 
 onMounted(() => {
+  if (!isClient) return;
   _visible.value = props.visible;
   window.addEventListener('resize', handleResize);
   if (props.visible) open();

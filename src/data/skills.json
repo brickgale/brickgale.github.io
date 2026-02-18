@@ -74,11 +74,5 @@
       "description": "Wordpress, Webflow, Framer"
     }
   ],
-  "aiTools": [
-    "Cursor",
-    "Antigravity",
-    "GitHub Copilot",
-    "ChatGPT",
-    "Gemini"
-  ]
+  "aiTools": ["Cursor", "Antigravity", "Copilot", "OpenAI", "Gemini"]
 }
