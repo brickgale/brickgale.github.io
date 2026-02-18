@@ -1,11 +1,11 @@
-import type { RouteRecordRaw } from 'vue-router';
-import Main from '@/app/pages/main/index.vue';
-import About from '@/app/pages/about/index.vue';
-import AboutProfile from '@/app/pages/about/profile/index.vue';
-import AboutSkills from '@/app/pages/about/skills/index.vue';
-import AboutMisc from '@/app/pages/about/misc/index.vue';
-import Projects from '@/app/pages/projects/index.vue';
-import Blog from '@/app/pages/blog/index.vue';
+import type { RouteRecordRaw } from 'vue-router'
+import Main from '@/app/pages/main/index.vue'
+import About from '@/app/pages/about/index.vue'
+import AboutProfile from '@/app/pages/about/profile/index.vue'
+import AboutSkills from '@/app/pages/about/skills/index.vue'
+import AboutMisc from '@/app/pages/about/misc/index.vue'
+import Projects from '@/app/pages/projects/index.vue'
+import Blog from '@/app/pages/blog/index.vue'
 // import NotFound from '../components/NotFound.vue'
 
 const routes: RouteRecordRaw[] = [
@@ -56,6 +56,6 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
-];
+]
 
-export default routes;
+export default routes

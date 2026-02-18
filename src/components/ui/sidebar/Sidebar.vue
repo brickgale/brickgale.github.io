@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref, unref } from 'vue';
-import { Backdrop } from '@/components/ui/backdrop';
-import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue';
+import { computed, onMounted, ref, unref } from 'vue'
+import { Backdrop } from '@/components/ui/backdrop'
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
 
-const el = ref<HTMLDivElement | null>(null);
-const emit = defineEmits(['sidebar-opened', 'sidebar-closed']);
+const el = ref<HTMLDivElement | null>(null)
+const emit = defineEmits(['sidebar-opened', 'sidebar-closed'])
 
 const props = defineProps({
   visible: {
@@ -19,52 +19,54 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-});
+})
 
-const _visible = ref(true);
-const fullWidth = ref(0);
-const isClient = typeof window !== 'undefined';
+const _visible = ref(true)
+const isVisible = computed(() => _visible.value)
+const fullWidth = ref(0)
+const isClient = typeof window !== 'undefined'
 
-const getClientWidth = () => (isClient ? document.documentElement.clientWidth : 0);
+const getClientWidth = () => (isClient ? document.documentElement.clientWidth : 0)
 
 function open() {
-  _visible.value = true;
-  el.value?.classList.add('opened');
-  if (props.mMode) el.value?.classList.add('m-mode');
-  emit('sidebar-opened');
+  _visible.value = true
+  el.value?.classList.add('opened')
+  if (props.mMode) el.value?.classList.add('m-mode')
+  emit('sidebar-opened')
 }
 
 function close() {
-  _visible.value = false;
-  el.value?.classList.remove('opened');
-  if (props.mMode) el.value?.classList.remove('m-mode');
-  emit('sidebar-closed');
+  _visible.value = false
+  el.value?.classList.remove('opened')
+  if (props.mMode) el.value?.classList.remove('m-mode')
+  emit('sidebar-closed')
 }
 
 function handleResize() {
-  if (!isClient) return;
-  fullWidth.value = getClientWidth();
+  if (!isClient) return
+  fullWidth.value = getClientWidth()
   if (unref(fullWidth) <= 1024 && _visible) {
-    close();
+    close()
   }
   if (unref(fullWidth) > 1024 && !_visible && props.visible) {
-    open();
+    open()
   }
 }
 
 onMounted(() => {
-  if (!isClient) return;
-  _visible.value = props.visible;
-  window.addEventListener('resize', handleResize);
-  if (props.visible) open();
-  handleResize();
-});
+  if (!isClient) return
+  _visible.value = props.visible
+  window.addEventListener('resize', handleResize)
+  if (props.visible) open()
+  handleResize()
+})
 
 defineExpose({
   open,
   close,
   _visible,
-});
+  isVisible,
+})
 </script>
 
 <template>
