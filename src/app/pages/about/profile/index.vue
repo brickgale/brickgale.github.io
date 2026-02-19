@@ -46,12 +46,12 @@
 </template>
 
 <script setup lang="ts">
-import profile from '@/data/profile.json';
-import { Card } from '@/components/ui/card';
+import profile from '@/data/profile.json'
+import { Card } from '@/components/ui/card'
 
-const { education, workHistory } = profile;
+const { education, workHistory } = profile
 
 //somehow if put on v-for it will reset on switching pages
-workHistory.reverse();
-education.reverse();
+workHistory.reverse()
+education.reverse()
 </script>

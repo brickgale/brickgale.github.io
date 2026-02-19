@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const emit = defineEmits(['close']);
+const emit = defineEmits(['close'])
 function close() {
-  emit('close');
+  emit('close')
 }
 </script>
 

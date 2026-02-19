@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { PropType } from 'vue';
+import { PropType } from 'vue'
 
 interface Menu {
-  route: string;
-  name: string;
-  linkClasses?: string;
+  route: string
+  name: string
+  linkClasses?: string
 }
 
 const props = defineProps({
   menu: Array as PropType<Array<Menu>>,
-});
+})
 </script>
 
 <template>

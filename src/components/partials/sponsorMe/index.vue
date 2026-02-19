@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -16,7 +16,11 @@ import { Button } from '@/components/ui/button';
         <p class="text-[#3e3f43] text-sm m-0 py-2.5">
           Help a brotha out by buying a cup of coffee. Cheers! 🙏
         </p>
-        <Button href="https://www.paypal.me/brianmonsales/100" class="btn my-2.5 uppercase rounded-full w-full" target="_blank">
+        <Button
+          href="https://www.paypal.me/brianmonsales/100"
+          class="btn my-2.5 uppercase rounded-full w-full"
+          target="_blank"
+        >
           <i class="fa fa-paypal mr-3"></i>
           Send some love
         </Button>
@@ -27,7 +31,9 @@ import { Button } from '@/components/ui/button';
         <h3 class="text-white">Contact Me</h3>
         <p class="text-white text-sm py-2.5">
           Do you want a stunning website for your existing business?
-          <a href="mailto:brianmonsales@gmail.com" class="text-gray-300" target="_top">Email me! </a>
+          <a href="mailto:brianmonsales@gmail.com" class="text-gray-300" target="_top"
+            >Email me!
+          </a>
           🔥
         </p>
       </div>
