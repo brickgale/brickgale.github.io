@@ -39,6 +39,7 @@
             <h3 class="mb-3"><i class="fa fa-code mr-3"></i>Main Skill Chart</h3>
             <div class="w-full h-[360px]">
               <v-chart
+                v-if="chartReady"
                 :option="options"
                 auto-resize
                 class="w-full mx-auto max-w-[320px] h-[320px]"
@@ -62,7 +63,7 @@
             <h3 class="mb-3"><i class="fa fa-github mr-3"></i>GitHub Contributions</h3>
             <div class="w-full overflow-x-auto overflow-y-hidden">
               <img
-                src="https://contribution.oooo.so/_/brickgale?chart=calendar&format=svg&weeks=50&theme=purple&widget_size=small"
+                :src="contributionGraphSrc"
                 alt="GitHub Contribution Graph"
                 class="max-w-[600px] h-[100px] -m-2"
               />
@@ -76,7 +77,8 @@
 
 <script setup lang="ts">
 import VChart from 'vue-echarts'
-import { ref } from 'vue'
+import { computed, inject, onMounted, ref } from 'vue'
+import type { ComputedRef } from 'vue'
 import type { Component } from 'vue'
 import { use } from 'echarts/core'
 import { Card } from '@/components/ui/card'
@@ -87,6 +89,27 @@ import { Antigravity, Cursor, Gemini, GithubCopilot, OpenAI } from '@/components
 import skills from '@/data/skills.json'
 
 const { tech, webappTechStack, landingPageTechStack, aiTools } = skills
+
+const chartReady = ref(false)
+onMounted(() => {
+  chartReady.value = true
+})
+
+const theme = inject<ComputedRef<string>>('theme')
+const contributionGraphSrc = computed(() => {
+  const isDark = theme?.value === 'dark'
+  const params = new URLSearchParams({
+    chart: 'calendar',
+    format: 'svg',
+    weeks: '50',
+    theme: 'purple',
+    widget_size: 'small',
+  })
+
+  if (isDark) params.set('dark', 'true')
+
+  return `https://contribution.oooo.so/_/brickgale?${params.toString()}`
+})
 
 const aiToolIconMap: Record<string, Component> = {
   Cursor,
