@@ -11,7 +11,7 @@
       }"
       defer
     >
-      <router-view></router-view>
+      <router-view />
     </OverlayScrollbarsComponent>
   </main>
 </template>

@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import profile from '@/data/profile.json'
+import { Card } from '@/components/ui/card'
+
+const { education, workHistory } = profile
+
+//somehow if put on v-for it will reset on switching pages
+workHistory.reverse()
+education.reverse()
+</script>
+
 <template>
   <div class="relative w-full max-w-[800px] m-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -7,7 +18,9 @@
           <ul class="timeline">
             <li v-for="job in workHistory">
               <span></span>
-              <Card class="hover:ring-[var(--primary-color)/0.5]">
+              <Card
+                class="border-black/10 dark:border-white/10 hover:ring-[var(--primary-color)/0.5]"
+              >
                 <p class="leading-4 mb-2">
                   {{ job.title }}
                 </p>
@@ -27,7 +40,9 @@
           <ul class="timeline">
             <li v-for="sy in education">
               <span></span>
-              <Card class="hover:ring-[var(--primary-color)/0.5]">
+              <Card
+                class="border-black/10 dark:border-white/10 hover:ring-[var(--primary-color)/0.5]"
+              >
                 <p class="leading-4 mb-2">
                   {{ sy.title }}
                 </p>
@@ -44,14 +59,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import profile from '@/data/profile.json'
-import { Card } from '@/components/ui/card'
-
-const { education, workHistory } = profile
-
-//somehow if put on v-for it will reset on switching pages
-workHistory.reverse()
-education.reverse()
-</script>

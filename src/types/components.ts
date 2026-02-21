@@ -1,7 +1,8 @@
+import type { HTMLAttributes } from 'vue'
+
 export type SvgProps = {
+  class?: HTMLAttributes['class']
   color?: string
-  size?: number | string
   width?: number | string
   height?: number | string
-  viewBox?: string
 }

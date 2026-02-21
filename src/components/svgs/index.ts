@@ -5,3 +5,8 @@ export { default as Gemini } from './Gemini.vue'
 export { default as Cursor } from './Cursor.vue'
 export { default as Moon } from './Moon.vue'
 export { default as Sun } from './Sun.vue'
+
+export { default as Svg } from './Svg.vue'
+export { default as Vue } from './Vue.vue'
+export { default as Nuxt } from './Nuxt.vue'
+export { default as Laravel } from './Laravel.vue'

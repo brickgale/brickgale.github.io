@@ -5,6 +5,7 @@ import { Menu } from '@/components/ui/menu'
 import { Button } from '@/components/ui/button'
 import { Sidebar } from '@/components/ui/sidebar'
 import { Profile } from '@/components/partials/profile'
+import { Sun, Moon } from '@/components/svgs'
 import SponsorMe from '@/components/partials/sponsorMe/index.vue'
 import 'overlayscrollbars/overlayscrollbars.css'
 
@@ -64,8 +65,8 @@ const menu = [
       type="ghost"
       class="absolute top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-19 text-lg"
     >
-      <i v-if="!isDark" class="fa fa-moon-o" aria-hidden="true"></i>
-      <i v-else class="fa fa-sun-o" aria-hidden="true"></i>
+      <Sun v-if="!isDark" :width="18" :height="18" />
+      <Moon v-else :width="18" :height="18" />
     </Button>
     <router-view />
   </div>
