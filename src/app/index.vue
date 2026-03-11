@@ -10,7 +10,7 @@ import SponsorMe from '@/components/partials/sponsorMe/index.vue'
 import 'overlayscrollbars/overlayscrollbars.css'
 
 const isDark = useDark({
-  selector: 'body', // applies .dark to <body>
+  selector: 'html',
   valueDark: 'dark',
   valueLight: 'light',
 })
@@ -62,7 +62,7 @@ const menu = [
   <div class="main-container" ref="adjContainer">
     <Button
       @click="toggleTheme()"
-      type="ghost"
+      variant="ghost"
       class="absolute top-0 right-0 w-[50px] h-[48px] p-0 text-white hover:text-white hover:opacity-70 wst z-19 text-lg"
     >
       <Sun v-if="!isDark" :width="18" :height="18" />

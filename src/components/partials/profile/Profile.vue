@@ -3,7 +3,7 @@ import profile from '@/data/profile.json'
 import socialIcons from '@/data/socials.json'
 import { cn } from '@/utils/css'
 
-const imgProfileClass = 'w-[50px] h-[50px] shadow-sm wst hover:scale-110 hover:z-21'
+const imgProfileClass = 'w-[50px] h-[50px] shadow-sm dark:shadow-[0_1px_2px_0_rgba(255,255,255,0.03)] wst hover:scale-110 hover:z-21'
 </script>
 
 <template>

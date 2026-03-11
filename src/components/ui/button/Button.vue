@@ -3,22 +3,22 @@ import { computed } from 'vue'
 import { cn } from '@/utils/css'
 
 type ButtonProps = {
-  type: 'ghost' | 'default'
+  variant?: 'ghost' | 'default'
   class?: string
   href?: string
   targetBlank?: boolean
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-  type: 'default',
+  variant: 'default',
   targetBlank: false,
 })
 
 const baseClass =
   'px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)] transition-colors duration-300 cursor-pointer flex items-center justify-center'
 
-const typeClass = computed(() =>
-  props.type === 'ghost'
+const variantClass = computed(() =>
+  props.variant === 'ghost'
     ? cn(
         baseClass,
         'bg-transparent hover:bg-transparent text-[var(--foreground)] hover:text-[var(--primary-color)] border-0'
@@ -26,7 +26,7 @@ const typeClass = computed(() =>
     : baseClass
 )
 
-const buttonClass = computed(() => cn(typeClass.value, props.class))
+const buttonClass = computed(() => cn(variantClass.value, props.class))
 </script>
 
 <template>

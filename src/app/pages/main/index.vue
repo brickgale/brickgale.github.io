@@ -1,5 +1,5 @@
 <template>
-  <main class="main wrapper row">
+  <main class="relative w-full h-full">
     <BurgerToggler @burger-opened="opened" @burger-closed="closed" ref="toggler" />
     <OverlayScrollbarsComponent
       element="span"

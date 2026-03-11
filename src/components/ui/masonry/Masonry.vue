@@ -11,7 +11,7 @@
       @mouseleave="e => handleMouseLeave(item.id, e.currentTarget as HTMLElement)"
     >
       <div
-        class="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[10px] leading-[10px]"
+        class="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] dark:shadow-[0px_10px_50px_-10px_rgba(255,255,255,0.08)] uppercase text-[10px] leading-[10px]"
         :style="{ backgroundImage: `url(${item.img})` }"
       >
         <div

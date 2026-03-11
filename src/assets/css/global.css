@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
   font-family: 'CircularStdBook';
@@ -60,7 +60,7 @@
   .dark {
     --background: oklch(21.711% 0.00251 248.17);
     --background-muted: oklch(30% 0.01 240);
-    --background-surface: oklch(31.553% 0.00336 229.306);
+    --background-surface: oklch(17.764% 0.00002 271.152);
     --foreground: oklch(98% 0.01 240);
     --foreground-muted: oklch(80% 0.01 240);
     --foreground-subtle: oklch(60% 0.01 240);
@@ -315,6 +315,12 @@
         width: 100%;
         height: 100%;
         padding: 20px;
+
+        .dark & {
+          box-shadow:
+            0 0 4px rgba(255, 255, 255, 0.05),
+            0 2px 2px rgba(255, 255, 255, 0.03);
+        }
       }
     }
   }

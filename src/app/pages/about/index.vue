@@ -9,7 +9,7 @@
             <img
               :src="typeof img === 'string' ? img : img?.src"
               @click="show"
-              class="rounded-md shadow-md hover:scale-105 wst"
+              class="rounded-md shadow-md dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.05),0_2px_4px_-2px_rgba(255,255,255,0.05)] hover:scale-105 wst"
             />
           </template>
         </div>
