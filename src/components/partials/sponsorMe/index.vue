@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <div class="sponsor-me np">
+  <div class="sponsor-me">
     <div class="addtional-info layered-bg relative overflow-hidden z-0">
       <div class="p-4 tracking-wide relative z-10">
         <h3 class="text-white">Stay Tuned</h3>
@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
         <Button
           href="https://www.paypal.me/brianmonsales/100"
           class="btn my-2.5 uppercase rounded-full w-full"
-          target="_blank"
+          :target-blank="true"
         >
           <i class="fa fa-paypal mr-3"></i>
           Send some love

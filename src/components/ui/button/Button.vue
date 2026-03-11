@@ -6,9 +6,13 @@ type ButtonProps = {
   type: 'ghost' | 'default'
   class?: string
   href?: string
+  targetBlank?: boolean
 }
 
-const props = defineProps<ButtonProps>()
+const props = withDefaults(defineProps<ButtonProps>(), {
+  type: 'default',
+  targetBlank: false,
+})
 
 const baseClass =
   'px-4 py-2 bg-[var(--primary-color)] text-white rounded hover:bg-[var(--secondary-color)] transition-colors duration-300 cursor-pointer flex items-center justify-center'
@@ -29,7 +33,13 @@ const buttonClass = computed(() => cn(typeClass.value, props.class))
   <button v-if="!props.href" :class="buttonClass">
     <slot />
   </button>
-  <a v-else :href="props.href" :class="buttonClass" target="_blank" rel="noopener noreferrer">
+  <a
+    v-else
+    :href="props.href"
+    :class="buttonClass"
+    :target="props.targetBlank ? '_blank' : undefined"
+    rel="noopener noreferrer"
+  >
     <slot />
   </a>
 </template>

@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import profile from '@/data/profile.json'
+import socialIcons from '@/data/socials.json'
+import { cn } from '@/utils/css'
+
+const imgProfileClass = 'w-[50px] h-[50px] shadow-sm wst hover:scale-110 hover:z-21'
+</script>
+
 <template>
   <div
     class="layered-bg relative z-10 h-[200px] justify-between flex flex-col items-center p-4 text-center text-white"
@@ -23,11 +31,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import profile from '@/data/profile.json'
-import socialIcons from '@/data/socials.json'
-import { cn } from '@/utils/css'
-
-const imgProfileClass = 'w-[50px] h-[50px] shadow-sm wst hover:scale-110 hover:z-21'
-</script>

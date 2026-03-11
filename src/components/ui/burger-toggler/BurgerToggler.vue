@@ -44,7 +44,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="toggler-con" @click="toggle">
+  <div class="absolute p-[15px]" @click="toggle">
     <div :class="['ui-burger-toggler', { white: isWhite }]" ref="el">
       <span></span><span></span><span></span> <span></span><span></span><span></span>
     </div>

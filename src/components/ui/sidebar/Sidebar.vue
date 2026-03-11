@@ -80,7 +80,7 @@ defineExpose({
     <div class="ui-sidebar-content">
       <OverlayScrollbarsComponent
         element="span"
-        class="main-con"
+        class="relative h-full w-full overflow-auto"
         :options="{
           scrollbars: {
             theme: 'os-theme-dark',

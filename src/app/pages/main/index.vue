@@ -40,5 +40,3 @@ watch(
   }
 )
 </script>
-
-<style lang="scss" src="./index.scss" />

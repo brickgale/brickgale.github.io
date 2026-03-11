@@ -52,5 +52,3 @@ const { show, onHide, visibleRef, indexRef, imgsRef } = useEasyLightbox({
   initIndex: 0,
 })
 </script>
-
-<style lang="scss" src="./index.scss" />
