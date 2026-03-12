@@ -53,7 +53,7 @@
             <div class="flex flex-wrap p-0">
               <span
                 v-for="item in tech"
-                class="px-2.5 py-0.5 rounded-[14px] bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] text-white text-sm mr-1.5 mb-1.5"
+                class="px-2.5 py-0.5 rounded-[14px] bg-gradient-to-br from-[var(--secondary-color)] to-[var(--primary-color)] dark:from-[var(--primary-color)] dark:to-[var(--secondary-color)] text-white text-sm mr-1.5 mb-1.5"
               >
                 {{ item }}
               </span>

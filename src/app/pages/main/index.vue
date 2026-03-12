@@ -3,7 +3,7 @@
     <BurgerToggler @burger-opened="opened" @burger-closed="closed" ref="toggler" />
     <OverlayScrollbarsComponent
       element="span"
-      class="main-con"
+      class="relative w-full h-full overflow-auto"
       :options="{
         scrollbars: {
           theme: 'os-theme-dark',
