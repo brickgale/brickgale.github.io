@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import profile from '@/data/profile.json'
 import { Card } from '@/components/ui/card'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
+import { vScrollAnimate } from '@/directives/vScrollAnimate'
 
 const { education, workHistory } = profile
 
@@ -26,9 +27,12 @@ useScrollAnimation(educationRef, { type: 'fade-up', delay: 0.2 })
         <Card ref="workHistoryRef" class="gap-4">
           <h3><i class="fa fa-briefcase mr-3"></i>Work History</h3>
           <ul class="timeline">
-            <li v-for="job in workHistory">
+            <li v-for="(job, index) in workHistory" :key="job.title">
               <span></span>
-              <Card class="border-black/10">
+              <Card
+                v-scroll-animate="{ type: 'fade-left', duration: 0.5, delay: index * 0.1 }"
+                class="border-black/10"
+              >
                 <p class="leading-4 mb-2">
                   {{ job.title }}
                 </p>
@@ -46,9 +50,10 @@ useScrollAnimation(educationRef, { type: 'fade-up', delay: 0.2 })
         <Card ref="educationRef" class="gap-4">
           <h3><i class="fa fa-graduation-cap mr-3"></i>Education</h3>
           <ul class="timeline">
-            <li v-for="sy in education">
+            <li v-for="(sy, index) in education" :key="sy.title">
               <span></span>
               <Card
+                v-scroll-animate="{ type: 'fade-left', duration: 0.5, delay: index * 0.1 }"
                 class="border-black/10 dark:border-white/10 hover:ring-[var(--primary-color)/0.5]"
               >
                 <p class="leading-4 mb-2">

@@ -1,19 +1,9 @@
 import { onMounted, onBeforeUnmount, type Ref } from 'vue'
 import { gsap } from 'gsap'
+import { getInitialAnimationState, getFinalAnimationState } from '@/utils/animate'
+import type { AnimationOptions } from '@/types/animate'
 
-export type AnimationType =
-  | 'fade-up'
-  | 'fade-down'
-  | 'fade-left'
-  | 'fade-right'
-  | 'fade-in'
-  | 'scale-in'
-
-export interface ScrollAnimationOptions {
-  type?: AnimationType
-  duration?: number
-  delay?: number
-  threshold?: number
+export interface ScrollAnimationOptions extends AnimationOptions {
   once?: boolean
 }
 
@@ -25,36 +15,6 @@ export function useScrollAnimation(
 
   let observer: IntersectionObserver | null = null
   let hasAnimated = false
-
-  const getInitialState = (animationType: AnimationType) => {
-    switch (animationType) {
-      case 'fade-up':
-        return { opacity: 0, y: 30 }
-      case 'fade-down':
-        return { opacity: 0, y: -30 }
-      case 'fade-left':
-        return { opacity: 0, x: 30 }
-      case 'fade-right':
-        return { opacity: 0, x: -30 }
-      case 'scale-in':
-        return { opacity: 0, scale: 0.9 }
-      case 'fade-in':
-      default:
-        return { opacity: 0 }
-    }
-  }
-
-  const getFinalState = () => {
-    return {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      scale: 1,
-      duration,
-      delay,
-      ease: 'power2.out',
-    }
-  }
 
   onMounted(() => {
     if (!elementRef.value) return
@@ -68,7 +28,7 @@ export function useScrollAnimation(
     }
 
     // Set initial state
-    gsap.set(element, getInitialState(type))
+    gsap.set(element, getInitialAnimationState(type))
 
     // Create intersection observer
     observer = new IntersectionObserver(
@@ -76,7 +36,7 @@ export function useScrollAnimation(
         entries.forEach(entry => {
           if (entry.isIntersecting && (!once || !hasAnimated)) {
             hasAnimated = true
-            gsap.to(entry.target, getFinalState())
+            gsap.to(entry.target, getFinalAnimationState(duration, delay))
 
             // If once is true, stop observing after animation
             if (once) {
@@ -87,7 +47,7 @@ export function useScrollAnimation(
       },
       {
         threshold,
-        rootMargin: '0px',
+        rootMargin: '50px', // Trigger 50px before element enters viewport
       }
     )
 
