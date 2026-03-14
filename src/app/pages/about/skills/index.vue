@@ -61,13 +61,26 @@
           </Card>
           <Card ref="githubCard">
             <h3 class="mb-3"><i class="fa fa-github mr-3"></i>GitHub Contributions</h3>
-            <div class="w-full overflow-x-auto overflow-y-hidden">
+            <OverlayScrollbarsComponent
+              element="div"
+              class="w-full"
+              :options="{
+                overflow: {
+                  x: 'scroll',
+                  y: 'hidden',
+                },
+                scrollbars: {
+                  theme: scrollbarTheme,
+                },
+              }"
+              defer
+            >
               <img
                 :src="contributionGraphSrc"
                 alt="GitHub Contribution Graph"
                 class="max-w-[600px] h-[100px] -m-2"
               />
-            </div>
+            </OverlayScrollbarsComponent>
           </Card>
         </div>
       </div>
@@ -87,6 +100,8 @@ import { RadarChart } from 'echarts/charts'
 import { PolarComponent, TitleComponent, TooltipComponent } from 'echarts/components'
 import { Antigravity, Cursor, Gemini, GithubCopilot, OpenAI } from '@/components/svgs'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
+import { useScrollbarTheme } from '@/composables/useScrollbarTheme'
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
 import skills from '@/data/skills.json'
 
 const { tech, webappTechStack, landingPageTechStack, aiTools } = skills
@@ -110,7 +125,9 @@ useScrollAnimation(mainSkillCard, { type: 'fade-up', delay: 0.2 })
 useScrollAnimation(familiarTechCard, { type: 'fade-up', delay: 0.25 })
 useScrollAnimation(githubCard, { type: 'fade-up', delay: 0.3 })
 
+const { scrollbarTheme } = useScrollbarTheme()
 const theme = inject<ComputedRef<string>>('theme')
+
 const contributionGraphSrc = computed(() => {
   const isDark = theme?.value === 'dark'
   const params = new URLSearchParams({

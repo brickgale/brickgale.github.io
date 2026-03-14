@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, unref } from 'vue'
 import { Backdrop } from '@/components/ui/backdrop'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
+import { useScrollbarTheme } from '@/composables/useScrollbarTheme'
 
 const el = ref<HTMLDivElement | null>(null)
 const emit = defineEmits(['sidebar-opened', 'sidebar-closed'])
@@ -20,6 +21,8 @@ const props = defineProps({
     default: false,
   },
 })
+
+const { scrollbarTheme } = useScrollbarTheme()
 
 const _visible = ref(true)
 const isVisible = computed(() => _visible.value)
@@ -83,7 +86,7 @@ defineExpose({
         class="relative h-full w-full overflow-auto"
         :options="{
           scrollbars: {
-            theme: 'os-theme-dark',
+            theme: scrollbarTheme,
           },
         }"
         defer

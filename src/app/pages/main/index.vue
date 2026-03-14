@@ -6,7 +6,7 @@
       class="relative w-full h-full overflow-auto"
       :options="{
         scrollbars: {
-          theme: 'os-theme-dark',
+          theme: scrollbarTheme,
         },
       }"
       defer
@@ -21,6 +21,7 @@ import { ref, inject, watch } from 'vue'
 import type { Ref } from 'vue'
 import { BurgerToggler } from '@/components/ui/burger-toggler'
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue'
+import { useScrollbarTheme } from '@/composables/useScrollbarTheme'
 
 interface UiSidebarType {
   open: () => void
@@ -30,6 +31,8 @@ interface UiSidebarType {
 
 const toggler = ref<any>(null)
 const sidebar = inject<Ref<UiSidebarType | null>>('sidebar', ref(null))
+const { scrollbarTheme } = useScrollbarTheme()
+
 const opened = () => sidebar.value?.open()
 const closed = () => sidebar.value?.close()
 

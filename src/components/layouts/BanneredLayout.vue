@@ -16,11 +16,9 @@ const classes = 'graphic-header-con layered-bg min-h-[200px] banner-img'
     <div
       v-if="!$slots.banner"
       :class="
-        cn(
-          classes,
-          props.bannerClass,
-          props.bannerSrc ? `after:!bg-[image:var(--banner-url)] sticky top-0` : ''
-        )
+        cn(classes, props.bannerClass, {
+          'after:!bg-[image:var(--banner-url)]': props.bannerSrc,
+        })
       "
       :style="props.bannerSrc ? { '--banner-url': `url(${props.bannerSrc})` } : {}"
     >
