@@ -2,10 +2,10 @@ import type { AnimationState } from '@/types/animate'
 import { AnimationType } from '@/types/animate'
 
 export const INITIAL_ANIMATION_STATES = {
-  'fade-up': { opacity: 0, y: 30 },
-  'fade-down': { opacity: 0, y: -30 },
-  'fade-left': { opacity: 0, x: 30 },
-  'fade-right': { opacity: 0, x: -60 },
+  'fade-up': { opacity: 0, y: 15 },
+  'fade-down': { opacity: 0, y: -15 },
+  'fade-left': { opacity: 0, x: 15 },
+  'fade-right': { opacity: 0, x: -30 },
   'scale-in': { opacity: 0, scale: 0.9 },
   'fade-in': { opacity: 0 },
 } as const

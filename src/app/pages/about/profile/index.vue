@@ -5,17 +5,16 @@ import { Card } from '@/components/ui/card'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import { vScrollAnimate } from '@/directives/vScrollAnimate'
 
-const { education, workHistory } = profile
+// Create reactive copies and reverse them
+const workHistory = ref([...profile.workHistory].reverse())
+const education = ref([...profile.education].reverse())
 
-//somehow if put on v-for it will reset on switching pages
-workHistory.reverse()
-education.reverse()
-
-// Animation refs
+// Animation refs - Cards
 const workHistoryRef = ref<HTMLElement | null>(null)
 const educationRef = ref<HTMLElement | null>(null)
 
 // Apply scroll animations
+// Cards
 useScrollAnimation(workHistoryRef, { type: 'fade-up', delay: 0.1 })
 useScrollAnimation(educationRef, { type: 'fade-up', delay: 0.2 })
 </script>
@@ -24,7 +23,7 @@ useScrollAnimation(educationRef, { type: 'fade-up', delay: 0.2 })
   <div class="relative w-full max-w-[800px] m-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="col-span-1">
-        <Card ref="workHistoryRef" class="gap-4">
+        <Card ref="workHistoryRef" class="gap-4" :titleDelay="0.2">
           <h3><i class="fa fa-briefcase mr-3"></i>Work History</h3>
           <ul class="timeline">
             <li v-for="(job, index) in workHistory" :key="job.title">
@@ -47,7 +46,7 @@ useScrollAnimation(educationRef, { type: 'fade-up', delay: 0.2 })
         </Card>
       </div>
       <div class="col-span-1">
-        <Card ref="educationRef" class="gap-4">
+        <Card ref="educationRef" class="gap-4" :titleDelay="0.3">
           <h3><i class="fa fa-graduation-cap mr-3"></i>Education</h3>
           <ul class="timeline">
             <li v-for="(sy, index) in education" :key="sy.title">

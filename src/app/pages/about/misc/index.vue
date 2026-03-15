@@ -2,24 +2,24 @@
   <div class="relative w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="col-span-1 space-y-4">
-        <Card ref="roadmapCard">
+        <Card ref="roadmapCard" :titleDelay="0.2">
           <h3><i class="fa fa-road mr-3"></i>Roadmap (Plans)</h3>
         </Card>
-        <Card ref="prioritiesCard">
+        <Card ref="prioritiesCard" :titleDelay="0.25">
           <h3><i class="fa fa-balance-scale mr-3"></i>Priorities</h3>
         </Card>
-        <Card ref="fitnessCard">
+        <Card ref="fitnessCard" :titleDelay="0.3">
           <h3><i class="fa fa-heartbeat mr-3"></i>Fitness Journey</h3>
         </Card>
       </div>
       <div class="col-span-1 space-y-4">
-        <Card ref="animeCard">
+        <Card ref="animeCard" :titleDelay="0.35">
           <h3><i class="fa fa-television mr-3"></i>Anime</h3>
         </Card>
-        <Card ref="gamingCard">
+        <Card ref="gamingCard" :titleDelay="0.4">
           <h3><i class="fa fa-gamepad mr-3"></i>Gaming</h3>
         </Card>
-        <Card ref="contentCard">
+        <Card ref="contentCard" :titleDelay="0.45">
           <h3><i class="fa fa-play mr-3"></i>Content Creation</h3>
         </Card>
       </div>
@@ -32,7 +32,7 @@ import { ref } from 'vue'
 import { Card } from '@/components/ui/card'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 
-// Animation refs
+// Animation refs - Cards
 const roadmapCard = ref<HTMLElement | null>(null)
 const prioritiesCard = ref<HTMLElement | null>(null)
 const fitnessCard = ref<HTMLElement | null>(null)
@@ -41,6 +41,7 @@ const gamingCard = ref<HTMLElement | null>(null)
 const contentCard = ref<HTMLElement | null>(null)
 
 // Apply scroll animations with staggered delays
+// Cards
 useScrollAnimation(roadmapCard, { type: 'fade-up', delay: 0.1 })
 useScrollAnimation(prioritiesCard, { type: 'fade-up', delay: 0.15 })
 useScrollAnimation(fitnessCard, { type: 'fade-up', delay: 0.2 })
