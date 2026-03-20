@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import VChart from 'vue-echarts'
 import { computed, inject, onMounted, ref } from 'vue'
-import type { ComputedRef } from 'vue'
-import type { Component } from 'vue'
+import type { ComputedRef, Component } from 'vue'
 import { use } from 'echarts/core'
 import { Card } from '@/components/ui/card'
 import { CanvasRenderer } from 'echarts/renderers'
@@ -113,24 +112,19 @@ const options = ref({
         </Card>
         <Card ref="techStackCard" :titleDelay="0.25">
           <h3 class="mb-3"><i class="fa fa-code-fork mr-3"></i>Familiar Tech Stack (Web)</h3>
-          <div class="px-5 space-y-2">
+          <div
+            class="px-5 space-y-2"
+            v-scroll-animate="{ type: 'fade-up', duration: 0.5, delay: 0.4 }"
+          >
             <h4>For Web Apps:</h4>
             <ul class="list-[circle] pl-4 [&>li]:list-item">
-              <li
-                v-for="(item, index) in webappTechStack"
-                :key="item.name"
-                v-scroll-animate="{ type: 'fade-up', duration: 0.5, delay: 0.4 + index * 0.08 }"
-              >
+              <li v-for="(item, index) in webappTechStack" :key="item.name">
                 {{ item.name }} <br />- {{ item.description }}
               </li>
             </ul>
             <h4>For Landing Pages:</h4>
             <ul class="list-[circle] pl-4 [&>li]:list-item">
-              <li
-                v-for="(item, index) in landingPageTechStack"
-                :key="item.name"
-                v-scroll-animate="{ type: 'fade-up', duration: 0.5, delay: 0.6 + index * 0.08 }"
-              >
+              <li v-for="(item, index) in landingPageTechStack" :key="item.name">
                 {{ item.name }} <br />- {{ item.description }}
               </li>
             </ul>
@@ -158,7 +152,7 @@ const options = ref({
               <span
                 v-for="(item, index) in tech"
                 :key="item"
-                v-scroll-animate="{ type: 'fade-up', duration: 0.4, delay: 0.5 + index * 0.03 }"
+                v-scroll-animate="{ type: 'fade-up', duration: 0.4, delay: 0.5 }"
                 class="px-2.5 py-0.5 rounded-[14px] bg-gradient-to-br from-[var(--secondary-color)] to-[var(--primary-color)] dark:from-[var(--primary-color)] dark:to-[var(--secondary-color)] text-white text-sm mr-1.5 mb-1.5"
               >
                 {{ item }}

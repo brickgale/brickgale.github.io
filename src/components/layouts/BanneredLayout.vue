@@ -25,6 +25,32 @@ const classes = 'graphic-header-con layered-bg min-h-[200px] banner-img'
       <slot name="banner-child" />
     </div>
     <slot name="banner" />
+
+    <!-- Radial gradient drop shadow -->
+    <div
+      class="absolute left-1/2 -translate-x-1/2 w-4/5 h-20 -mt-10 pointer-events-none -z-1"
+      style="
+        background: radial-gradient(
+          ellipse at center,
+          color-mix(in srgb, var(--primary-color) 30%, transparent) 0%,
+          color-mix(in srgb, var(--primary-color) 15%, transparent) 50%,
+          transparent 70%
+        );
+      "
+    ></div>
+
+    <!-- Linear gradient drop shadow -->
+    <div
+      class="absolute left-0 right-0 h-12 -mt-8 pointer-events-none -z-1"
+      style="
+        background: linear-gradient(
+          to bottom,
+          color-mix(in srgb, var(--primary-color) 80%, transparent) 0%,
+          transparent 100%
+        );
+      "
+    ></div>
+
     <slot />
   </div>
 </template>

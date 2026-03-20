@@ -269,7 +269,7 @@
       > span {
         width: 1px;
         height: 100%;
-        background: #c0c0c0;
+        background: color-mix(in oklch, var(--foreground-subtle), white 20%);
         left: 0;
         top: 0;
         position: absolute;
